@@ -1,7 +1,13 @@
 <main class="container h-screen">
-  <h1 class="text-primary font-bold text-3xl mt-4">Hello {{title}}</h1>
+  <div class="flex justify-between items-center pt-4">
+    <h1 class="text-primary font-bold text-3xl">
+      {{ "GREETING" | translate }}
+    </h1>
+    <div class="flex items-center gap-4">
+      <app-language-selector />
+      <app-theme-toggle />
+    </div>
+  </div>
 </main>
-
-
 
 <router-outlet />

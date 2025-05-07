@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { ThemeToggleComponent } from './shared/ui/theme-toggle/theme-toggle.component';
+import { LanguageSelectorComponent } from './shared/ui/language-selector/language-selector.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet,
+    TranslateModule,
+    ThemeToggleComponent,
+    LanguageSelectorComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'event-booking-system';
-}
+export class AppComponent {}
