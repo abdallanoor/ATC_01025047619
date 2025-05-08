@@ -81,7 +81,7 @@ export class LanguageSelectorComponent implements OnInit {
   ngOnInit() {
     this.languages = [
       { name: 'English', code: 'en', flag: 'assets/flags/us.png' },
-      { name: 'العربية', code: 'ar', flag: 'assets/flags/saudi.png' },
+      { name: 'العربية', code: 'ar', flag: 'assets/flags/eg.png' },
     ];
 
     const savedLangCode = localStorage.getItem('lang') || 'en';
