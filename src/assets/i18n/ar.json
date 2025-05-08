@@ -23,5 +23,10 @@
     "enterNewPassword": "اكتب كلمة سر جديدة",
     "newPassword": "كلمة السر الجديدة",
     "reset": "غير"
+  },
+  "navbar": {
+    "logo": "تـذكــــرة",
+    "signin": "سجل دخولك",
+    "createAccount": "اعمل حساب"
   }
 }

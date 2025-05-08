@@ -23,5 +23,10 @@
     "enterNewPassword": "Enter New Password",
     "newPassword": "New Password",
     "reset": "Reset"
+  },
+  "navbar": {
+    "logo": "Tazkara",
+    "signin": "Sign in",
+    "createAccount": "Create account"
   }
 }

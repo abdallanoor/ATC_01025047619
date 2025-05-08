@@ -3,17 +3,11 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { ThemeToggleComponent } from './shared/ui/theme-toggle/theme-toggle.component';
 import { LanguageSelectorComponent } from './shared/ui/language-selector/language-selector.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    TranslateModule,
-    ThemeToggleComponent,
-    LanguageSelectorComponent,
-    RouterLink,
-    RouterLinkActive,
-  ],
+  imports: [RouterOutlet, TranslateModule, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

@@ -27,7 +27,7 @@ interface Language {
       [(ngModel)]="selectedLanguage"
       optionLabel="name"
       (onChange)="onLanguageChange()"
-      class="select w-24 text-xs p-2"
+      class="select w-24 text-xs p-2 ms-1"
       size="small"
     >
       <ng-template #selectedItem let-selectedOption>

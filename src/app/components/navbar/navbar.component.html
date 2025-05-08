@@ -1,0 +1,44 @@
+<header>
+  <div class="container flex justify-between py-3">
+    <nav class="md:flex-1 pt-1">
+
+      <!-- Desktop Navigation -->
+      <ul class="flex gap-4 max-md:hidden">
+
+        <li>
+          <a routerLink="/login" class="link-underline"
+            routerLinkActive="underline underline-offset-6">{{"navbar.signin" | translate}}</a>
+        </li>
+
+        <li>
+          <a routerLink="/register" class="link-underline"
+            routerLinkActive="underline underline-offset-6">{{"navbar.createAccount" | translate}}</a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <!-- Logo -->
+    <a routerLink="/" class="flex items-center gap-1">
+      <h1 class="font-bold uppercase text-xl leading-none" title="Home">
+        {{"navbar.logo" | translate}}
+      </h1>
+      <i class="font-bold  pi pi-ticket" style="font-size: 1rem;"></i>
+    </a>
+
+    <!-- User/Icons Navigation and dark-mode/language-selector -->
+    <nav class="flex-1 flex items-center justify-end">
+      <ul class="flex items-center gap-1">
+
+        <li class="md:hidden">
+          <p-button icon="pi pi-user-plus" routerLink="/login" [link]="true" [rounded]="true" [text]="true"
+            severity="secondary" size="small" />
+        </li>
+
+        <app-theme-toggle />
+        <app-language-selector />
+
+      </ul>
+    </nav>
+  </div>
+</header>
