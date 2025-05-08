@@ -27,20 +27,25 @@ interface Language {
       [(ngModel)]="selectedLanguage"
       optionLabel="name"
       (onChange)="onLanguageChange()"
+      class="select w-24 text-xs p-2"
+      size="small"
     >
       <ng-template #selectedItem let-selectedOption>
         @if (selectedOption) {
-        <div class="flex items-center gap-2">
-          <img [src]="selectedOption.flag" width="18" />
+        <div class="flex items-center gap-1 text-xs">
+          <img [src]="selectedOption.flag" width="15" />
           <div>{{ selectedOption.name }}</div>
         </div>
         }
       </ng-template>
       <ng-template let-lang #item>
-        <div class="flex items-center gap-2">
-          <img [src]="lang.flag" width="18" />
+        <div class="flex items-center text-xs gap-1">
+          <img [src]="lang.flag" width="15" />
           <div>{{ lang.name }}</div>
         </div>
+      </ng-template>
+      <ng-template #dropdownicons>
+        <i class="icon pi pi-chevron-down"></i>
       </ng-template>
     </p-select>
   `,
@@ -50,6 +55,19 @@ interface Language {
         .p-select {
           background: transparent;
         }
+      }
+      :host ::ng-deep .p-select-dropdown {
+        width: 10px !important;
+      }
+      :host ::ng-deep .p-select-dropdown .p-icon {
+        width: 10px !important;
+        height: 10px !important;
+      }
+      :host ::ng-deep .p-select-label {
+        padding: 0px !important;
+      }
+      :host ::ng-deep .p-select-option {
+        padding: 0.5rem !important;
       }
     `,
   ],
