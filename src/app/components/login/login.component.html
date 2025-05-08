@@ -1,0 +1,24 @@
+<div class="container flex justify-center items-center mt-6 mx-auto">
+  <div class="w-96">
+    <h2 class="text-xl font-semibold mb-4">{{ "auth.signin" | translate }}</h2>
+    <form class="flex flex-col gap-4" [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+      <p-floatlabel variant="in" class="text-sm">
+        <input pInputText class="w-full" id="email" type="email" autocomplete="off" formControlName="email" />
+        <label for="email">{{ "auth.email" | translate }}</label>
+      </p-floatlabel>
+
+      <p-floatlabel variant="in" class="text-sm">
+        <p-password inputStyleClass="w-full" styleClass="w-full" autocomplete="current-password" inputId="password"
+          formControlName="password" [feedback]="false" [toggleMask]="true" />
+        <label for="password">{{ "auth.password" | translate }}</label>
+      </p-floatlabel>
+
+      <p-button [label]="'auth.signin' | translate" type="submit" styleClass="w-full" />
+      <a routerLink="/register" class="p-button p-button-outlined w-full mt-1">{{ "auth.createAccount" | translate
+        }}</a>
+    </form>
+
+    <a routerLink="/resetpassword" class="text-sm block text-center mt-4 font-semibold underline underline-offset-4">{{
+      "auth.forgotPassword" | translate }}</a>
+  </div>
+</div>

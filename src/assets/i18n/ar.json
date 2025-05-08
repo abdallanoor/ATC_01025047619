@@ -1,3 +1,27 @@
 {
-  "GREETING": "مرحبا"
+  "GREETING": "أهلاً",
+  "auth": {
+    "signin": "سجل دخولك",
+    "createYourAccount": "اعمل حسابك",
+    "createAccount": "اعمل حساب",
+    "forgotPassword": "نسيت كلمة السر؟",
+    "email": "الإيميل",
+    "password": "كلمة السر",
+    "confirmPassword": "أكد كلمة السر",
+    "name": "اسمك كامل",
+    "AlreadyHaveAnAccount": "عندك حساب قبل كده؟",
+    "sendEmail": "ابعت الإيميل",
+    "verifyCode": "أكد الكود",
+    "resetPassword": "رجّع كلمة السر",
+    "resetPasswordInfo": "هنبعتلك إيميل علشان تغيّر كلمة السر",
+    "send": "ابعت",
+    "iRememberNow": "افتكرت دلوقتي!",
+    "enterVerificationCode": "اكتب كود التفعيل",
+    "verify": "أكد",
+    "somethingWentWrong": "في حاجة غلط؟",
+    "resendEmail": "ابعت الإيميل تاني",
+    "enterNewPassword": "اكتب كلمة سر جديدة",
+    "newPassword": "كلمة السر الجديدة",
+    "reset": "غير"
+  }
 }

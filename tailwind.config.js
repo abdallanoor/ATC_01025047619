@@ -1,11 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-import PrimeUI from 'tailwindcss-primeui';
+import PrimeUI from "tailwindcss-primeui";
 
 module.exports = {
-  content: [
-    "./src/**/*.{html,ts}",
-  ],
-  theme: { 
+  content: ["./src/**/*.{html,ts}"],
+  theme: {
     extend: {
       container: {
         padding: "1rem",
@@ -23,8 +21,7 @@ module.exports = {
     },
   },
   corePlugins: {
-    preflight: false,
+    // preflight: false,
   },
-  plugins: [PrimeUI]
-
-}
+  plugins: [PrimeUI],
+};

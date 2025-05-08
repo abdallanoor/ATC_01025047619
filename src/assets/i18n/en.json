@@ -1,3 +1,27 @@
 {
-  "GREETING": "Hello"
+  "GREETING": "Hello",
+  "auth": {
+    "signin": "Sign in",
+    "createYourAccount": "Create your account",
+    "createAccount": "Create account",
+    "forgotPassword": "Forgot your password?",
+    "email": "Email address",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "name": "Full name",
+    "AlreadyHaveAnAccount": "Already have an account?",
+    "sendEmail": "Send email",
+    "verifyCode": "Verify Code",
+    "resetPassword": "Reset Password",
+    "resetPasswordInfo": "We will send you an e-mail to reset your password",
+    "send": "Send",
+    "iRememberNow": "I remember now!",
+    "enterVerificationCode": "Enter Verification Code",
+    "verify": "Verify",
+    "somethingWentWrong": "Something went wrong?",
+    "resendEmail": "Resend email",
+    "enterNewPassword": "Enter New Password",
+    "newPassword": "New Password",
+    "reset": "Reset"
+  }
 }

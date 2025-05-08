@@ -1,0 +1,9 @@
+:host {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100%;
+}
+.link-underline {
+  @apply uppercase text-xs font-semibold ltr:tracking-wider hover:underline hover:underline-offset-6 decoration-1;
+}
