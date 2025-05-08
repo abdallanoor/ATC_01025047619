@@ -27,6 +27,8 @@
   "navbar": {
     "logo": "تـذكــــرة",
     "signin": "سجل دخولك",
-    "createAccount": "اعمل حساب"
+    "createAccount": "اعمل حساب",
+    "adminPanel": "صفحة الأدمن",
+    "logout": "سجل خروجك"
   }
 }

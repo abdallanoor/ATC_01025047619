@@ -15,28 +15,38 @@
             routerLinkActive="underline underline-offset-6">{{"navbar.createAccount" | translate}}</a>
         </li>
 
+        <li>
+          <a routerLink="/admin-panel" class="link-underline"
+            routerLinkActive="underline underline-offset-6">{{"navbar.adminPanel" | translate}}</a>
+        </li>
+
       </ul>
     </nav>
 
     <!-- Logo -->
     <a routerLink="/" class="flex items-center gap-1">
-      <h1 class="font-bold uppercase text-xl leading-none" title="Home">
+      <h1 class="font-bold text-xl" [title]="'navbar.logo' | translate">
         {{"navbar.logo" | translate}}
       </h1>
-      <i class="font-bold  pi pi-ticket" style="font-size: 1rem;"></i>
+      <i class="font-bold pi pi-ticket rotate-90" style="font-size: 1.1rem;"></i>
     </a>
 
     <!-- User/Icons Navigation and dark-mode/language-selector -->
     <nav class="flex-1 flex items-center justify-end">
       <ul class="flex items-center gap-1">
-
-        <li class="md:hidden">
+        <app-language-selector />
+        <app-theme-toggle />
+        <li class="md:hidden" [title]="'navbar.signin' | translate">
           <p-button icon="pi pi-user-plus" routerLink="/login" [link]="true" [rounded]="true" [text]="true"
             severity="secondary" size="small" />
         </li>
-
-        <app-theme-toggle />
-        <app-language-selector />
+        <li class="md:hidden" [title]="'navbar.adminPanel' | translate">
+          <p-button icon="pi pi-chart-bar" routerLink="/admin-panel" [link]="true" [rounded]="true" [text]="true"
+            severity="secondary" size="small" />
+        </li>
+        <li class="rtl:rotate-180" [title]="'navbar.logout' | translate">
+          <p-button icon="pi pi-sign-out" [rounded]="true" [text]="true" severity="secondary" size="small" />
+        </li>
 
       </ul>
     </nav>
