@@ -13,6 +13,7 @@ import { ButtonModule } from 'primeng/button';
       severity="secondary"
       [rounded]="true"
       [text]="true"
+      size="small"
     />
   `,
 })

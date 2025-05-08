@@ -11,23 +11,18 @@
 }
 
 @layer base {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    margin: 0;
-    padding: 0;
-  }
 
   html,
   body {
-    margin: 0;
-    padding: 0;
     width: 100%;
     height: 100%;
     font-family: "Montserrat", "Tajawal", sans-serif !important;
   }
+}
+
+/* Icons Override */
+.p-button-icon,
+.p-button-icon:before,
+.p-button-icon:after {
+  line-height: normal !important;
 }
