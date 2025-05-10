@@ -21,5 +21,6 @@ module.exports = {
       },
     },
   },
+  darkMode: ["selector", '[class~="dark"]'],
   plugins: [PrimeUI],
 };
