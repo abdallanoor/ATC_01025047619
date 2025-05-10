@@ -1,0 +1,25 @@
+<div class="flex flex-col md:flex-row bg-primary-contrast shadow rounded-lg overflow-hidden">
+  <div class="relative w-full md:w-[70%]">
+    <img
+      src="https://images.dzzn8wni.ext.evbdomains.com/marketing/landingpages/assets/2025/rebrand/organizer/a--s-img-hero-00.webp"
+      class="w-full max-h-64 object-cover" alt="Title">
+    <p-badge [value]="'events.category' | translate" class="absolute top-3 start-3" severity="secondary" />
+    <p-badge [value]="'events.isBooked' | translate"
+      class="absolute top-3 end-3 md:top-auto md:end-auto md:bottom-3 md:start-3" severity="success" />
+  </div>
+  <div class="w-full md:w-[30%] p-3 text-sm flex flex-col gap-2">
+    <h2 class="font-semibold text-lg">{{"events.EventTitle" | translate }}</h2>
+    <p class="truncate max-w-full">{{"events.description" | translate }}</p>
+    <div class="flex items-center gap-2">
+      <i class="pi pi-map-marker" style="font-size: 0.875rem;"></i>
+      <p>{{"events.location" | translate }}</p>
+    </div>
+    <div class="flex items-center gap-2">
+      <i class="pi pi-calendar" style="font-size: 0.875rem;"></i>
+      <p>Jun 15, 2025</p>
+    </div>
+    <p class="font-medium">400 {{"events.price" | translate }}</p>
+    <p-button [label]="'events.bookNow' | translate" severity="secondary" class="w-full mt-1 md:mt-auto"
+      styleClass="w-full" size="small" />
+  </div>
+</div>

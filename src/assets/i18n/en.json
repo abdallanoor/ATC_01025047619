@@ -30,5 +30,16 @@
     "createAccount": "Create account",
     "adminPanel": "Admin Panel",
     "logout": "Log out"
+  },
+  "events": {
+    "title": "Events",
+    "search": "Search",
+    "EventTitle": "Event Title",
+    "category": "Category",
+    "isBooked": "Booked",
+    "description": "Event Description",
+    "bookNow": "Book now",
+    "location": "Location",
+    "price": "EGP"
   }
 }

@@ -30,5 +30,16 @@
     "createAccount": "اعمل حساب",
     "adminPanel": "صفحة الأدمن",
     "logout": "سجل خروجك"
+  },
+  "events": {
+    "title": "الإيفنتات",
+    "search": "ابحث",
+    "EventTitle": "العنوان",
+    "category": "الفئة",
+    "isBooked": "محجوز",
+    "description": "الشرح",
+    "bookNow": "أحجز دلوقتي",
+    "location": "العنوان",
+    "price": "جنيه"
   }
 }

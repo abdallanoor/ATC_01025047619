@@ -1,0 +1,14 @@
+<section class="container">
+  <div class="flex flex-col gap-6 mt-5">
+    <h1 class="font-semibold text-3xl">{{"events.title" | translate }}</h1>
+    <p-iconfield>
+      <p-inputicon styleClass="pi pi-search" />
+      <input type="text" pInputText [placeholder]="'events.search' | translate" class="w-full sm:!w-96" />
+    </p-iconfield>
+    <app-event-card />
+    <div class="flex justify-center">
+      <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="20"
+        [showFirstLastIcon]="false" />
+    </div>
+  </div>
+</section>
