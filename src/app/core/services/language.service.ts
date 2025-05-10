@@ -7,14 +7,14 @@ import { TranslateService } from '@ngx-translate/core';
 export class LanguageService {
   private translate = inject(TranslateService);
   constructor() {
-    const savedLang = localStorage.getItem('lang') || 'en';
+    const savedLang = localStorage.getItem('lang') || 'ar';
     this.translate.setDefaultLang(savedLang);
     this.translate.use(savedLang);
     this.changeLanguage(savedLang);
   }
 
   changeDirection() {
-    const savedLang = localStorage.getItem('lang') || 'en';
+    const savedLang = localStorage.getItem('lang') || 'ar';
     if (savedLang == 'ar') {
       document.documentElement.dir = 'rtl';
       document.documentElement.lang = 'ar';

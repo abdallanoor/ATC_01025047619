@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ThemeService {
   constructor() {
-    const isDark = localStorage.getItem('theme') === 'dark';
+    const isDark = (localStorage.getItem('theme') || 'dark') === 'dark';
     this.setTheme(isDark);
   }
 
@@ -17,10 +17,10 @@ export class ThemeService {
   private setTheme(isDark: boolean): void {
     if (isDark) {
       document.documentElement.classList.add('dark');
-      // document.documentElement.classList.remove('light');
+      document.documentElement.classList.remove('light');
       localStorage.setItem('theme', 'dark');
     } else {
-      // document.documentElement.classList.add('light');
+      document.documentElement.classList.add('light');
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', '');
     }
