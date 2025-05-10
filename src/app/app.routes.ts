@@ -4,6 +4,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { HomeComponent } from './components/home/home.component';
 import { EventDetailsComponent } from './components/event-details/event-details.component';
+import { CongratulationsScreenComponent } from './components/congratulations-screen/congratulations-screen.component';
 
 export const routes: Routes = [
   {
@@ -26,5 +27,10 @@ export const routes: Routes = [
     path: 'event/:id',
     component: EventDetailsComponent,
     title: 'Event details',
+  },
+  {
+    path: 'congratulations',
+    component: CongratulationsScreenComponent,
+    title: 'Congratulations',
   },
 ];

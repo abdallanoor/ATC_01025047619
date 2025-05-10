@@ -33,7 +33,7 @@
     <div
       class="fixed bottom-0 right-0 left-0 md:sticky md:top-4 md:min-w-80 h-fit md:ms-16 p-3 bg-primary-contrast border rounded-border border-surface">
       <p class="font-medium mb-4">{{'events.price' | translate}}: 400 {{'events.egp' | translate}}</p>
-      <p-button [label]="'events.bookNow' | translate" styleClass="w-full" size="small" />
+      <p-button [label]="'events.bookNow' | translate" styleClass="w-full" size="small" (onClick)="onBook()" />
     </div>
   </div>
 </main>

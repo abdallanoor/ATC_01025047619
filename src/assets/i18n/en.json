@@ -41,7 +41,15 @@
     "description": "Event Description",
     "bookNow": "Book now",
     "location": "Location",
-    "egp": "EGP",
-    "price": "Price"
+    "price": "Price",
+    "egp": "EGP"
+  },
+  "booking": {
+    "congratulations": "Congratulations!",
+    "ticketBooked": "Your ticket has been booked successfully",
+    "dateTime": "Date & Time",
+    "arriveEarly": "Please arrive 15 minutes before the event starts.",
+    "browseEvents": "Browse more events",
+    "viewBookings": "View my bookings"
   }
 }

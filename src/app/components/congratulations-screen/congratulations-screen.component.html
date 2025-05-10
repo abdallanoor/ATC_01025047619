@@ -1,0 +1,57 @@
+<div class="min-h-[calc(100vh-60px)] flex justify-center p-4 relative overflow-hidden">
+  <canvas id="confetti-canvas" class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></canvas>
+
+  <div class="z-10 w-full max-w-md rounded-lg shadow-lg bg-primary-contrast overflow-hidden h-full">
+    <div class="bg-green-50 text-center px-6 py-8 dark:bg-green-950/60">
+      <div class="flex justify-center mb-4">
+        <div class="flex items-center justify-center bg-green-200 rounded-full p-3 w-16 h-16 dark:bg-green-800">
+          <span class="text-green-700 text-2xl dark:text-green-400">✔</span>
+        </div>
+      </div>
+      <h1 class="text-xl font-semibold text-green-700 mb-1 dark:text-green-400">
+        {{ "booking.congratulations" | translate }}
+      </h1>
+      <p class="text-green-600 text-sm dark:text-green-500">
+        {{ "booking.ticketBooked" | translate }}
+      </p>
+    </div>
+
+    <div class="p-6">
+      <h2 class="text-lg font-bold text-center mb-4">
+        {{ "events.eventTitle" | translate }}
+      </h2>
+      <div class="grid grid-cols-2 gap-y-2 text-sm">
+        <div class="opacity-60 font-medium">
+          {{ "booking.dateTime" | translate }}
+        </div>
+        <div class="text-end font-medium">Jun 15, 2025</div>
+
+        <div class="opacity-60 font-medium">
+          {{ "events.location" | translate }}
+        </div>
+        <div class="text-end font-medium">
+          {{ "events.location" | translate }}
+        </div>
+
+        <div class="opacity-60 font-medium">
+          {{ "events.price" | translate }}
+        </div>
+        <div class="text-end font-medium">
+          400 {{ "events.egp" | translate }}
+        </div>
+      </div>
+
+      <div class="bg-zinc-100 opacity-70 text-sm mt-6 p-3 rounded-md dark:bg-zinc-800">
+        {{ "booking.arriveEarly" | translate }}
+      </div>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 w-full">
+        <a routerLink="/" class="p-button p-button-prmary p-button-sm w-full">{{
+          "booking.browseEvents" | translate
+          }}</a>
+        <a routerLink="/bookings" class="p-button p-button-secondary p-button-sm w-full">{{ "booking.viewBookings" |
+          translate }}</a>
+      </div>
+    </div>
+  </div>
+</div>

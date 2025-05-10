@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { BadgeModule } from 'primeng/badge';
 import { ButtonModule } from 'primeng/button';
@@ -7,6 +8,11 @@ import { ButtonModule } from 'primeng/button';
   selector: 'app-event-details',
   imports: [BadgeModule, TranslateModule, ButtonModule],
   templateUrl: './event-details.component.html',
-  styleUrl: './event-details.component.css',
 })
-export class EventDetailsComponent {}
+export class EventDetailsComponent {
+  router = inject(Router);
+
+  onBook(): void {
+    this.router.navigate(['/congratulations']);
+  }
+}
