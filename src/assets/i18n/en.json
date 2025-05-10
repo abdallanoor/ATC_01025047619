@@ -34,12 +34,14 @@
   "events": {
     "title": "Events",
     "search": "Search",
-    "EventTitle": "Event Title",
+    "eventTitle": "Event Title",
+    "dateAndTime": "Date and Time",
     "category": "Category",
     "isBooked": "Booked",
     "description": "Event Description",
     "bookNow": "Book now",
     "location": "Location",
-    "price": "EGP"
+    "egp": "EGP",
+    "price": "Price"
   }
 }

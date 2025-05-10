@@ -1,0 +1,39 @@
+<main class="container">
+  <div class="w-full my-4">
+    <img
+      src="https://images.dzzn8wni.ext.evbdomains.com/marketing/landingpages/assets/2025/rebrand/organizer/a--s-img-hero-00.webp"
+      class="w-full rounded-lg h-48 md:h-96 object-cover" alt="Title">
+  </div>
+  <div class="flex justify-between items-center gap-2 mb-2">
+    <p-badge [value]="'events.category' | translate" />
+    <div>
+      <p-button icon="pi pi-heart" [rounded]="true" [text]="true" severity="secondary" />
+      <p-button icon="pi pi-upload" [rounded]="true" [text]="true" severity="secondary" />
+    </div>
+  </div>
+  <div class="relative flex justify-between flex-col md:flex-row">
+    <div>
+      <h1 class="text-3xl md:text-5xl font-bold mb-4 md:mb-6">{{'events.eventTitle' | translate }}</h1>
+      <p class="md:text-lg font-medium mb-4">{{'events.description' | translate }}</p>
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">{{'events.dateAndTime' | translate }}</h2>
+        <div class="flex items-center gap-2 mb-6">
+          <i class="pi pi-calendar-clock" style="font-size: 0.875rem;"></i>
+          <p class="text-sm font-medium">Jun 15, 2025</p>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">{{'events.location' | translate }}</h2>
+        <div class="flex items-center gap-2 mb-6">
+          <i class="pi pi-map-marker" style="font-size: 0.875rem;"></i>
+          <p class="text-sm font-medium">{{'events.location' | translate }}</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="fixed bottom-0 right-0 left-0 md:sticky md:top-4 md:min-w-80 h-fit md:ms-16 p-3 bg-primary-contrast border rounded-border border-surface">
+      <p class="font-medium mb-4">{{'events.price' | translate}}: 400 {{'events.egp' | translate}}</p>
+      <p-button [label]="'events.bookNow' | translate" styleClass="w-full" size="small" />
+    </div>
+  </div>
+</main>

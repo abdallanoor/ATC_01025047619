@@ -3,6 +3,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { HomeComponent } from './components/home/home.component';
+import { EventDetailsComponent } from './components/event-details/event-details.component';
 
 export const routes: Routes = [
   {
@@ -21,4 +22,9 @@ export const routes: Routes = [
     title: 'Forgot password',
   },
   { path: '', component: HomeComponent, title: 'Tazkara' },
+  {
+    path: 'event/:id',
+    component: EventDetailsComponent,
+    title: 'Event details',
+  },
 ];

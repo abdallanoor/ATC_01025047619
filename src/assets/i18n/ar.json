@@ -32,14 +32,16 @@
     "logout": "سجل خروجك"
   },
   "events": {
-    "title": "الإيفنتات",
+    "title": "الفعاليات",
     "search": "ابحث",
-    "EventTitle": "العنوان",
+    "eventTitle": "اسم الفعالية",
+    "dateAndTime": "التاريخ والوقت",
     "category": "الفئة",
     "isBooked": "محجوز",
     "description": "الشرح",
     "bookNow": "أحجز دلوقتي",
     "location": "العنوان",
-    "price": "جنيه"
+    "egp": "جنيه",
+    "price": "السعر"
   }
 }

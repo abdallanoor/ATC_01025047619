@@ -8,7 +8,7 @@
       class="absolute top-3 end-3 md:top-auto md:end-auto md:bottom-3 md:start-3" severity="success" />
   </div>
   <div class="w-full md:w-[30%] p-3 text-sm flex flex-col gap-2">
-    <h2 class="font-semibold text-lg">{{"events.EventTitle" | translate }}</h2>
+    <h2 class="font-semibold text-lg">{{"events.eventTitle" | translate }}</h2>
     <p class="truncate max-w-full">{{"events.description" | translate }}</p>
     <div class="flex items-center gap-2">
       <i class="pi pi-map-marker" style="font-size: 0.875rem;"></i>
@@ -18,8 +18,10 @@
       <i class="pi pi-calendar" style="font-size: 0.875rem;"></i>
       <p>Jun 15, 2025</p>
     </div>
-    <p class="font-medium">400 {{"events.price" | translate }}</p>
-    <p-button [label]="'events.bookNow' | translate" severity="secondary" class="w-full mt-1 md:mt-auto"
-      styleClass="w-full" size="small" />
+    <p class="font-medium">400 {{"events.egp" | translate }}</p>
+    <a [routerLink]="'/event/' + 1" class="p-button p-button-secondary p-button-sm w-full mt-1 md:mt-auto">{{
+      "events.bookNow" |
+      translate
+      }}</a>
   </div>
 </div>

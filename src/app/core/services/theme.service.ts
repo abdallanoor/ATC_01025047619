@@ -17,12 +17,12 @@ export class ThemeService {
   private setTheme(isDark: boolean): void {
     if (isDark) {
       document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
+      // document.documentElement.classList.remove('light');
       localStorage.setItem('theme', 'dark');
     } else {
-      document.documentElement.classList.add('light');
+      // document.documentElement.classList.add('light');
       document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+      localStorage.setItem('theme', '');
     }
   }
 }
