@@ -22,7 +22,7 @@ export class ThemeService {
     } else {
       document.documentElement.classList.add('light');
       document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', '');
+      localStorage.setItem('theme', 'light');
     }
   }
 }
