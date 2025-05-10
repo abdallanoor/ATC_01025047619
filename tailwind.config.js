@@ -2,7 +2,7 @@
 import PrimeUI from "tailwindcss-primeui";
 
 module.exports = {
-  content: ["./src/**/*.{html,ts}"],
+  content: ["./src/*/.{html,ts}"],
   theme: {
     extend: {
       container: {
@@ -10,18 +10,16 @@ module.exports = {
         center: true,
         screens: {
           sm: "100%",
-          md: "100%",
-          lg: "100%",
-          xl: "100%",
+          md: "780px",
+          lg: "920px",
+          xl: "1120px",
+          "2xl": "1280px",
         },
       },
       textUnderlineOffset: {
         6: "6px",
       },
     },
-  },
-  corePlugins: {
-    // preflight: false,
   },
   plugins: [PrimeUI],
 };
