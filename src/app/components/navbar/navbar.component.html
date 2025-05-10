@@ -1,9 +1,9 @@
 <header>
   <div class="container flex justify-between py-3">
-    <nav class="md:flex-1 pt-1">
+    <nav class="lg:flex-1 pt-1">
 
       <!-- Desktop Navigation -->
-      <ul class="flex gap-4 max-md:hidden">
+      <ul class="flex gap-4 max-lg:hidden">
 
         <li>
           <a routerLink="/login" class="link-underline"
@@ -36,11 +36,11 @@
       <ul class="flex items-center gap-1">
         <app-language-selector />
         <app-theme-toggle />
-        <li class="md:hidden" [title]="'navbar.signin' | translate">
+        <li class="lg:hidden" [title]="'navbar.signin' | translate">
           <p-button icon="pi pi-user-plus" routerLink="/login" [link]="true" [rounded]="true" [text]="true"
             severity="secondary" size="small" />
         </li>
-        <li class="md:hidden" [title]="'navbar.adminPanel' | translate">
+        <li class="lg:hidden" [title]="'navbar.adminPanel' | translate">
           <p-button icon="pi pi-chart-bar" routerLink="/admin-panel" [link]="true" [rounded]="true" [text]="true"
             severity="secondary" size="small" />
         </li>
