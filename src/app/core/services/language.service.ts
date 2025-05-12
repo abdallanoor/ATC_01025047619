@@ -7,33 +7,28 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LanguageService {
   private translate = inject(TranslateService);
-  private langSubject = new BehaviorSubject<string>('ar');
+  private langSubject = new BehaviorSubject<string>(this.getSavedLang());
   public lang$ = this.langSubject.asObservable();
 
   constructor() {
-    const savedLang = localStorage.getItem('lang') || 'ar';
-    this.langSubject.next(savedLang);
-    this.translate.setDefaultLang(savedLang);
-    this.translate.use(savedLang);
-    this.changeLanguage(savedLang);
-  }
-
-  changeDirection() {
-    const savedLang = localStorage.getItem('lang') || 'ar';
-    if (savedLang == 'ar') {
-      document.documentElement.dir = 'rtl';
-      document.documentElement.lang = 'ar';
-    } else {
-      document.documentElement.dir = 'ltr';
-      document.documentElement.lang = 'en';
-    }
+    const lang = this.langSubject.value;
+    this.setLang(lang);
   }
 
   changeLanguage(lang: string) {
+    this.setLang(lang);
     this.langSubject.next(lang);
-    this.translate.setDefaultLang(lang);
+  }
+
+  private setLang(lang: string) {
     this.translate.use(lang);
+    this.translate.setDefaultLang(lang);
     localStorage.setItem('lang', lang);
-    this.changeDirection();
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  }
+
+  private getSavedLang(): string {
+    return localStorage.getItem('lang') || 'ar';
   }
 }
