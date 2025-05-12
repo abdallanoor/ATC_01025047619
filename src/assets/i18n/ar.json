@@ -51,5 +51,26 @@
     "arriveEarly": "ياريت تيجي قبل بداية الحدث بـ ١٥ دقيقة.",
     "browseEvents": "شوف فعاليات تانية",
     "viewBookings": "عرض حجوزاتي"
+  },
+  "admin": {
+    "title": "صفحة الأدمن",
+    "manageYourEvents": "إدارة فعالياتك",
+    "search": "ابحث",
+    "addNewEvent": "ضيف فعالية جديدة",
+    "eventName": "اسم الفعالية",
+    "description": "الوصف",
+    "category": "التصنيف",
+    "date": "التاريخ",
+    "venue": "المكان",
+    "price": "السعر",
+    "free": "مجاني",
+    "egp": "جنيه",
+    "image": "الصورة",
+    "actions": "إجراءات",
+    "dialog": {
+      "deleteHeader": "حذف الفعالية",
+      "delete": "حذف",
+      "cancel": "إلغاء"
+    }
   }
 }

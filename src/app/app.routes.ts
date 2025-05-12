@@ -5,6 +5,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { HomeComponent } from './components/home/home.component';
 import { EventDetailsComponent } from './components/event-details/event-details.component';
 import { CongratulationsScreenComponent } from './components/congratulations-screen/congratulations-screen.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 export const routes: Routes = [
   {
@@ -32,5 +33,10 @@ export const routes: Routes = [
     path: 'congratulations',
     component: CongratulationsScreenComponent,
     title: 'Congratulations',
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    title: 'Admin',
   },
 ];

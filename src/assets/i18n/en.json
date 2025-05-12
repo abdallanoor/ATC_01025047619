@@ -51,5 +51,26 @@
     "arriveEarly": "Please arrive 15 minutes before the event starts.",
     "browseEvents": "Browse more events",
     "viewBookings": "View my bookings"
+  },
+  "admin": {
+    "title": "Admin panel",
+    "manageYourEvents": "Manage your events",
+    "search": "Search",
+    "addNewEvent": "Add new event",
+    "eventName": "Event Name",
+    "description": "Description",
+    "category": "Category",
+    "date": "Date",
+    "venue": "Venue",
+    "price": "Price",
+    "free": "Free",
+    "egp": "EGP",
+    "image": "Image",
+    "actions": "Actions",
+    "dialog": {
+      "deleteHeader": "Delete event",
+      "delete": "Delete",
+      "cancel": "Cancel"
+    }
   }
 }
