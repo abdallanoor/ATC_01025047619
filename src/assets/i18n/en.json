@@ -67,10 +67,44 @@
     "egp": "EGP",
     "image": "Image",
     "actions": "Actions",
+    "noEvents": "No events available",
     "dialog": {
       "deleteHeader": "Delete event",
       "delete": "Delete",
       "cancel": "Cancel"
+    },
+    "form": {
+      "create": "Create New Event",
+      "edit": "Edit Event",
+      "labels": {
+        "eventNameEn": "Event Name (English)",
+        "category": "Category",
+        "descriptionEn": "Description (English)",
+        "venueEn": "Venue (English)",
+        "price": "Price",
+        "date": "Date",
+        "image": "Image URL",
+        "eventNameAr": "Event Name (Arabic)",
+        "descriptionAr": "Description (Arabic)",
+        "venueAr": "Venue (Arabic)"
+      },
+      "errors": {
+        "eventName": "Please enter the event name.",
+        "category": "Please select a category.",
+        "description": "Please enter the event description.",
+        "venue": "Please enter the event venue.",
+        "price": "Please enter a valid price.",
+        "date": "Please select the event date.",
+        "image": "Please enter the image URL."
+      },
+      "section": {
+        "arabicDetails": "Arabic Details"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "create": "Create Event",
+        "edit": "Edit Event"
+      }
     }
   }
 }

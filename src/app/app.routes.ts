@@ -6,6 +6,9 @@ import { HomeComponent } from './components/home/home.component';
 import { EventDetailsComponent } from './components/event-details/event-details.component';
 import { CongratulationsScreenComponent } from './components/congratulations-screen/congratulations-screen.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { AdminEventListComponent } from './components/admin-event-list/admin-event-list.component';
+import { CreateEventComponent } from './components/create-event/create-event.component';
+import { EditEventComponent } from './components/edit-event/edit-event.component';
 
 export const routes: Routes = [
   {
@@ -37,6 +40,22 @@ export const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-    title: 'Admin',
+    children: [
+      {
+        path: '',
+        component: AdminEventListComponent,
+        title: 'Admin',
+      },
+      {
+        path: 'event/create',
+        component: CreateEventComponent,
+        title: 'Create Event',
+      },
+      {
+        path: 'event/edit/:id',
+        component: EditEventComponent,
+        title: 'Edit Event',
+      },
+    ],
   },
 ];

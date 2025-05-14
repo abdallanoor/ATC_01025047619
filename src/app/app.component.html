@@ -1,4 +1,5 @@
-<app-navbar />
 <main>
+  <p-toast [position]="currentLanguage == 'ar' ? 'bottom-left' : 'bottom-right'" />
+  <app-navbar />
   <router-outlet />
 </main>

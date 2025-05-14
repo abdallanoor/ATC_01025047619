@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 @import "primeicons/primeicons.css";
 @tailwind base;
 @tailwind components;
@@ -11,7 +11,6 @@
 }
 
 @layer base {
-
   html,
   body {
     width: 100%;
@@ -25,4 +24,13 @@
 .p-button-icon:before,
 .p-button-icon:after {
   line-height: normal !important;
+}
+
+/* Toast Override */
+.p-toast-message-text {
+  @apply !gap-0;
+}
+
+.p-toast {
+  @apply max-sm:!w-80;
 }

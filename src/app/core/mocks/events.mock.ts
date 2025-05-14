@@ -2,11 +2,11 @@ import { Event } from '../interfaces/event.interface';
 
 export const EVENTS: Event[] = [
   {
-    id: 1,
+    id: 'event-1',
     eventName: 'Cairo Tech Meetup',
     description:
       'A gathering of tech enthusiasts to discuss the latest in software and AI.',
-    category: 'Technology',
+    category: { ar: 'تكنولوجيا', en: 'Technology', id: '4' },
     date: '2025-06-20T18:00:00',
     venue: 'The Greek Campus, Downtown Cairo',
     price: 0,
@@ -17,14 +17,13 @@ export const EVENTS: Event[] = [
       description:
         'تجمع لمحبي التكنولوجيا لمناقشة أحدث التطورات في البرمجيات والذكاء الاصطناعي.',
       venue: 'الجامعة اليونانية، وسط البلد',
-      category: 'تكنولوجيا',
     },
   },
   {
-    id: 2,
+    id: 'event-2',
     eventName: 'Alexandria Music Night',
     description: 'An open-air music concert featuring local Egyptian artists.',
-    category: 'Music',
+    category: { ar: 'موسيقي', en: 'Music', id: '1' },
     date: '2025-07-05T20:30:00',
     venue: 'Bibliotheca Alexandrina Plaza',
     price: 100,
@@ -34,7 +33,6 @@ export const EVENTS: Event[] = [
       eventName: 'ليلة الموسيقى في إسكندرية',
       description: 'حفلة موسيقية في الهواء الطلق بمشاركة فنانين مصريين.',
       venue: 'ساحة مكتبة الإسكندرية',
-      category: 'موسيقى',
     },
   },
 ];

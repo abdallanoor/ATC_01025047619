@@ -1,8 +1,10 @@
+import { Category } from './category.interface';
+
 export interface Event {
-  id: number;
+  id: string;
   eventName: string;
   description: string;
-  category: string;
+  category: Category;
   date: string;
   venue: string;
   price: number;
@@ -10,7 +12,6 @@ export interface Event {
   ar: {
     eventName: string;
     description: string;
-    category: string;
     venue: string;
   };
 }

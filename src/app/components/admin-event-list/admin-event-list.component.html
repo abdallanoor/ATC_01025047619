@@ -1,0 +1,76 @@
+<section class="mb-14">
+  <div class="mb-6">
+    <h1 class="text-3xl font-bold">{{ "admin.title" | translate }}</h1>
+    <p class="text-sm text-muted-color">
+      {{ "admin.manageYourEvents" | translate }}
+    </p>
+  </div>
+  <div class="flex justify-between flex-col sm:flex-row gap-4 mb-6">
+    <p-iconfield>
+      <p-inputicon styleClass="pi pi-search" />
+      <input #searchInput type="text" pInputText [placeholder]="'admin.search' | translate" class="w-full sm:!w-96"
+        (input)="eventsTable.filterGlobal(searchInput.value, 'contains')" />
+    </p-iconfield>
+    <a routerLink="event/create" class="p-button font-semibold">
+      {{ "admin.addNewEvent" | translate }} <i class="pi pi-plus"></i>
+    </a>
+  </div>
+  <p-table #eventsTable [value]="events" [globalFilterFields]="
+      currentLanguage === 'ar'
+        ? ['ar.eventName', 'category.ar', 'ar.venue']
+        : ['eventName', 'category.en', 'venue']
+    ">
+    <ng-template #header>
+      <tr>
+        <th>{{ "admin.eventName" | translate }}</th>
+        <th>{{ "admin.category" | translate }}</th>
+        <th>{{ "admin.venue" | translate }}</th>
+        <th>{{ "admin.date" | translate }}</th>
+        <th>{{ "admin.price" | translate }}</th>
+        <th>{{ "admin.actions" | translate }}</th>
+      </tr>
+    </ng-template>
+    <ng-template #body let-event>
+      <tr>
+        <td>
+          {{ currentLanguage === "ar" ? event.ar.eventName : event.eventName }}
+        </td>
+        <td>
+          {{ currentLanguage === "ar" ? event.category.ar : event.category.en }}
+        </td>
+        <td>{{ currentLanguage === "ar" ? event.ar.venue : event.venue }}</td>
+        <td>{{ event.date | date : "dd/MM/yyyy • HH:mm" }}</td>
+        <td>
+          {{
+          event.price === 0
+          ? ("admin.free" | translate)
+          : event.price + " " + ("admin.egp" | translate)
+          }}
+        </td>
+        <td>
+          <div class="flex items-center gap-2">
+            <p-button icon="pi pi-pen-to-square" [routerLink]="'event/edit/' + event.id" [link]="true" [rounded]="true"
+              [text]="true" severity="secondary" size="small" />
+            <p-button icon="pi pi-trash" [rounded]="true" [text]="true" severity="danger" size="small"
+              (click)="showDialog(event)" />
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template #emptymessage>
+      <tr>
+        <td colspan="10" class="!text-center">
+          {{ "admin.noEvents" | translate }}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <!-- Delete Dialog -->
+  <p-dialog [header]="'admin.dialog.deleteHeader' | translate" [modal]="true" [draggable]="false" [(visible)]="visible"
+    [style]="{ width: '25rem' }">
+    <div class="flex justify-end gap-2">
+      <p-button [label]="'admin.dialog.cancel' | translate" severity="secondary" (click)="visible = false" />
+      <p-button [label]="'admin.dialog.delete' | translate" severity="danger" (click)="deleteEvent()" />
+    </div>
+  </p-dialog>
+</section>

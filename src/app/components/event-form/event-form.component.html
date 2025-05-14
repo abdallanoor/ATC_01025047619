@@ -1,0 +1,171 @@
+<div class="mb-8 p-6 border border-surface rounded-lg shadow">
+  <h2 class="text-2xl font-bold mb-6">
+    {{
+    event
+    ? ("admin.form.edit" | translate)
+    : ("admin.form.create" | translate)
+    }}
+  </h2>
+  <form [formGroup]="eventForm" (ngSubmit)="onSubmit()" class="grid-inputs">
+    <!-- Event Name (en) -->
+    <div>
+      <label for="eventName" class="label">{{
+        "admin.form.labels.eventNameEn" | translate
+        }}</label>
+      <input pInputText id="eventName" formControlName="eventName" class="w-full" />
+      @if (eventForm.get('eventName')?.invalid &&
+      eventForm.get('eventName')?.touched) {
+      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{ "admin.form.errors.eventName" |
+        translate }}</p-message>
+      }
+    </div>
+
+    <!-- Venue (en) -->
+    <div>
+      <label for="venue" class="label">{{
+        "admin.form.labels.venueEn" | translate
+        }}</label>
+      <input type="text" id="venue" formControlName="venue" pInputText class="w-full" />
+      @if (eventForm.get('venue')?.invalid && eventForm.get('venue')?.touched) {
+      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
+        "admin.form.errors.venue" | translate
+        }}</p-message>
+      }
+    </div>
+
+    <!-- Description (en) -->
+    <div>
+      <label for="description" class="label">{{
+        "admin.form.labels.descriptionEn" | translate
+        }}</label>
+      <textarea id="description" formControlName="description" pInputTextarea rows="1" class="w-full"></textarea>
+      @if (eventForm.get('description')?.invalid &&
+      eventForm.get('description')?.touched) {
+      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
+        "admin.form.errors.description" | translate
+        }}</p-message>
+      }
+    </div>
+
+    <!-- Category -->
+    <div>
+      <label for="category" class="label">{{
+        "admin.form.labels.category" | translate
+        }}</label>
+      <p-select id="category" [options]="categories" formControlName="category"
+        [optionLabel]="currentLanguage === 'ar' ? 'ar' : 'en'" styleClass="w-full">
+      </p-select>
+      @if (eventForm.get('category')?.invalid &&
+      eventForm.get('category')?.touched) {
+      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
+        "admin.form.errors.category" | translate
+        }}</p-message>
+      }
+    </div>
+
+    <!-- Price -->
+    <div>
+      <label for="price" class="label">{{
+        "admin.form.labels.price" | translate
+        }}</label>
+      <p-inputNumber inputId="price" formControlName="price" [min]="0" class="w-full"></p-inputNumber>
+      @if (eventForm.get('price')?.invalid && eventForm.get('price')?.touched) {
+      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
+        "admin.form.errors.price" | translate
+        }}</p-message>
+      }
+    </div>
+
+    <!-- Date -->
+    <div>
+      <label for="date" class="label">{{
+        "admin.form.labels.date" | translate
+        }}</label>
+      <p-datepicker inputId="date" formControlName="date" [showIcon]="true" [iconDisplay]="'input'" [showTime]="true"
+        class="w-full" styleClass="w-full max-w-full" />
+      @if (eventForm.get('date')?.invalid && eventForm.get('date')?.touched) {
+      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
+        "admin.form.errors.date" | translate
+        }}</p-message>
+      }
+    </div>
+
+    <!-- Image -->
+    <div class="col-span-full">
+      <label for="image" class="label">{{
+        "admin.form.labels.image" | translate
+        }}</label>
+      <input type="text" id="image" formControlName="image" pInputText class="w-full" />
+      @if (eventForm.get('image')?.invalid && eventForm.get('image')?.touched) {
+      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
+        "admin.form.errors.image" | translate
+        }}</p-message>
+      }
+    </div>
+    @if (eventForm.get('image')?.value) {
+    <div class="mt-2 aspect-video w-full max-w-sm overflow-hidden rounded-md">
+      <img [src]="eventForm.get('image')?.value" alt="Event preview" class="h-full w-full object-cover" />
+    </div>
+    }
+
+    <div class="col-span-full border-t border-surface pt-4">
+      <h3 class="text-xl font-semibold mb-4">
+        {{ "admin.form.section.arabicDetails" | translate }}
+      </h3>
+      <div class="grid-inputs" formGroupName="ar">
+        <!-- Event Name (ar) -->
+        <div>
+          <label for="ar.eventName" class="label">{{
+            "admin.form.labels.eventNameAr" | translate
+            }}</label>
+          <input type="text" id="ar.eventName" formControlName="eventName" pInputText class="w-full" />
+          @if (eventForm.get('ar.eventName')?.invalid &&
+          eventForm.get('ar.eventName')?.touched) {
+          <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
+            "admin.form.errors.eventName" | translate
+            }}</p-message>
+          }
+        </div>
+
+        <!-- Venue (ar) -->
+        <div>
+          <label for="ar.venue" class="label">{{
+            "admin.form.labels.venueAr" | translate
+            }}</label>
+          <input type="text" id="ar.venue" formControlName="venue" pInputText class="w-full" />
+          @if (eventForm.get('ar.venue')?.invalid &&
+          eventForm.get('ar.venue')?.touched) {
+          <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
+            "admin.form.errors.venue" | translate
+            }}</p-message>
+          }
+        </div>
+
+        <!-- Description (ar) -->
+        <div class="col-span-full">
+          <label for="ar.description" class="label">{{
+            "admin.form.labels.descriptionAr" | translate
+            }}</label>
+          <textarea id="ar.description" formControlName="description" pInputTextarea rows="1" class="w-full"></textarea>
+          @if (eventForm.get('ar.description')?.invalid &&
+          eventForm.get('ar.description')?.touched) {
+          <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
+            "admin.form.errors.description" | translate
+            }}</p-message>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="col-span-full mt-1 flex justify-end gap-4">
+      <a pButton routerLink="/admin" class="p-button p-button-secondary p-button-outlined font-semibold max-sm:w-full">
+        {{ "admin.form.buttons.cancel" | translate }}
+      </a>
+      <p-button [label]="
+          event
+            ? ('admin.form.buttons.edit' | translate)
+            : ('admin.form.buttons.create' | translate)
+        " type="submit" class="max-sm:w-full" styleClass="max-sm:w-full" />
+    </div>
+  </form>
+</div>
