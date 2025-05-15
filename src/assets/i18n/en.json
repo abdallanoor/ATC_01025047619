@@ -26,6 +26,7 @@
   },
   "navbar": {
     "logo": "Tazkara",
+    "home": "Home",
     "signin": "Sign in",
     "createAccount": "Create account",
     "adminPanel": "Admin Panel",

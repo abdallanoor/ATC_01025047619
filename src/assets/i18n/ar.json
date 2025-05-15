@@ -26,6 +26,7 @@
   },
   "navbar": {
     "logo": "تـذكــــرة",
+    "home": "الرئسية",
     "signin": "سجل دخولك",
     "createAccount": "اعمل حساب",
     "adminPanel": "صفحة الأدمن",

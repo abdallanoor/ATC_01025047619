@@ -1,25 +1,31 @@
-<header>
+<header class="bg-white dark:bg-[#121212]">
   <div class="container flex justify-between py-3">
     <nav class="lg:flex-1 pt-1">
 
       <!-- Desktop Navigation -->
       <ul class="flex gap-4 max-lg:hidden">
-
         <li>
-          <a routerLink="/login" class="link-underline"
-            routerLinkActive="underline underline-offset-6">{{"navbar.signin" | translate}}</a>
+          <a routerLink="/" class="link-underline" routerLinkActive="routerLinkActive"
+            [routerLinkActiveOptions]="{ exact: true }">{{"navbar.home" |
+            translate}}</a>
         </li>
 
         <li>
-          <a routerLink="/register" class="link-underline"
-            routerLinkActive="underline underline-offset-6">{{"navbar.createAccount" | translate}}</a>
+          <a routerLink="/login" class="link-underline" routerLinkActive="routerLinkActive">{{"navbar.signin" |
+            translate}}</a>
         </li>
 
         <li>
-          <a routerLink="/admin" class="link-underline"
-            routerLinkActive="underline underline-offset-6">{{"navbar.adminPanel" | translate}}</a>
+          <a routerLink="/register" class="link-underline" routerLinkActive="routerLinkActive">{{"navbar.createAccount"
+            |
+            translate}}</a>
         </li>
 
+        <li>
+          <a routerLink="/admin" class="link-underline" routerLinkActive="routerLinkActive"
+            [routerLinkActiveOptions]="{ exact: true }">{{"navbar.adminPanel" |
+            translate}}</a>
+        </li>
       </ul>
     </nav>
 
