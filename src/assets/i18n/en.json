@@ -7,6 +7,9 @@
     "forgotPassword": "Forgot your password?",
     "email": "Email address",
     "password": "Password",
+    "demo": "Show demo accounts",
+    "admin": "Try as Admin",
+    "user": "Try as User",
     "confirmPassword": "Confirm password",
     "name": "Full name",
     "AlreadyHaveAnAccount": "Already have an account?",
@@ -22,7 +25,14 @@
     "resendEmail": "Resend email",
     "enterNewPassword": "Enter New Password",
     "newPassword": "New Password",
-    "reset": "Reset"
+    "reset": "Reset",
+    "errors": {
+      "required": "Complete this field to continue",
+      "emailFormat": "Check your e-mail format (e.g. name@email.com)",
+      "passwordLength": "Password must have at-least 8 characters",
+      "nameLength": "Name must have at least 4 characters",
+      "passwordsMismatch": "Passwords do not match"
+    }
   },
   "navbar": {
     "logo": "Tazkara",

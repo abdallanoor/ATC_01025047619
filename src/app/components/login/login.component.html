@@ -1,21 +1,41 @@
 <div class="container flex justify-center items-center mt-6 mx-auto">
   <div class="w-96">
-    <h2 class="text-xl font-semibold mb-4">{{ "auth.signin" | translate }}</h2>
+    <h2 class="text-2xl font-semibold mb-4">{{ "auth.signin" | translate }}</h2>
     <form class="flex flex-col gap-4" [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
-      <p-floatlabel variant="in" class="text-sm">
-        <input pInputText class="w-full" id="email" type="email" autocomplete="off" formControlName="email" />
-        <label for="email">{{ "auth.email" | translate }}</label>
-      </p-floatlabel>
+      <div>
+        <p-floatlabel variant="in" class="text-sm">
+          <input pInputText class="w-full" id="email" type="email" formControlName="email" />
+          <label for="email">{{ "auth.email" | translate }}</label>
+        </p-floatlabel>
+        <app-form-field-error-message [form]="loginForm" controlName="email" />
+      </div>
 
-      <p-floatlabel variant="in" class="text-sm">
-        <p-password inputStyleClass="w-full" styleClass="w-full" autocomplete="current-password" inputId="password"
-          formControlName="password" [feedback]="false" [toggleMask]="true" />
-        <label for="password">{{ "auth.password" | translate }}</label>
-      </p-floatlabel>
+      <div>
+        <p-floatlabel variant="in" class="text-sm">
+          <p-password inputStyleClass="w-full" styleClass="w-full" autocomplete="current-password" inputId="password"
+            formControlName="password" [feedback]="false" [toggleMask]="true" />
+          <label for="password">{{ "auth.password" | translate }}</label>
+        </p-floatlabel>
+        <app-form-field-error-message [form]="loginForm" controlName="password" />
+      </div>
 
       <p-button [label]="'auth.signin' | translate" type="submit" styleClass="w-full" />
-      <a routerLink="/register" class="p-button p-button-outlined w-full mt-1">{{ "auth.createAccount" | translate
-        }}</a>
+      <p-button [label]="'auth.demo' | translate" severity="secondary" variant="outlined" styleClass="w-full"
+        (onClick)="toggleMessage()" />
+      @if (messageVisible) {
+      <p-message severity="secondary" size="small" variant="outlined">
+        <div class="font-mono">
+          <p>
+            {{ "auth.admin" | translate }}: admin&#64;areebgroup.com / 12345678
+          </p>
+          <p>
+            {{ "auth.user" | translate }}: user&#64;areebgroup.com / 12345678
+          </p>
+        </div>
+      </p-message>
+      }
+      <a routerLink="/register" class="p-button p-button-outlined w-full mt-1 font-semibold">{{ "auth.createAccount" |
+        translate }}</a>
     </form>
 
     <a routerLink="/resetpassword" class="text-sm block text-center mt-4 font-semibold underline underline-offset-4">{{

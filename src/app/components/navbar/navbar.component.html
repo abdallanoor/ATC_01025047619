@@ -1,40 +1,38 @@
-<header class="bg-white dark:bg-[#121212]">
+<header>
   <div class="container flex justify-between py-3">
     <nav class="lg:flex-1 pt-1">
-
       <!-- Desktop Navigation -->
       <ul class="flex gap-4 max-lg:hidden">
         <li>
           <a routerLink="/" class="link-underline" routerLinkActive="routerLinkActive"
-            [routerLinkActiveOptions]="{ exact: true }">{{"navbar.home" |
-            translate}}</a>
+            [routerLinkActiveOptions]="{ exact: true }">{{ "navbar.home" | translate }}</a>
+        </li>
+
+        @if (!isLoggedIn) {
+        <li>
+          <a routerLink="/login" class="link-underline" routerLinkActive="routerLinkActive">{{ "navbar.signin" |
+            translate }}</a>
         </li>
 
         <li>
-          <a routerLink="/login" class="link-underline" routerLinkActive="routerLinkActive">{{"navbar.signin" |
-            translate}}</a>
+          <a routerLink="/register" class="link-underline" routerLinkActive="routerLinkActive">{{ "navbar.createAccount"
+            | translate }}</a>
         </li>
-
-        <li>
-          <a routerLink="/register" class="link-underline" routerLinkActive="routerLinkActive">{{"navbar.createAccount"
-            |
-            translate}}</a>
-        </li>
-
+        } @if (isLoggedIn && user.role === 'admin') {
         <li>
           <a routerLink="/admin" class="link-underline" routerLinkActive="routerLinkActive"
-            [routerLinkActiveOptions]="{ exact: true }">{{"navbar.adminPanel" |
-            translate}}</a>
+            [routerLinkActiveOptions]="{ exact: true }">{{ "navbar.adminPanel" | translate }}</a>
         </li>
+        }
       </ul>
     </nav>
 
     <!-- Logo -->
     <a routerLink="/" class="flex items-center gap-1">
       <h1 class="font-bold text-xl" [title]="'navbar.logo' | translate">
-        {{"navbar.logo" | translate}}
+        {{ "navbar.logo" | translate }}
       </h1>
-      <i class="font-bold pi pi-ticket rotate-90" style="font-size: 1.1rem;"></i>
+      <i class="font-bold pi pi-ticket rotate-90" style="font-size: 1.1rem"></i>
     </a>
 
     <!-- User/Icons Navigation and dark-mode/language-selector -->
@@ -42,18 +40,22 @@
       <ul class="flex items-center gap-1">
         <app-language-selector />
         <app-theme-toggle />
+        @if (!isLoggedIn) {
         <li class="lg:hidden" [title]="'navbar.signin' | translate">
           <p-button icon="pi pi-user-plus" routerLink="/login" [link]="true" [rounded]="true" [text]="true"
             severity="secondary" size="small" />
         </li>
+        } @if (isLoggedIn && user.role === 'admin') {
         <li class="lg:hidden" [title]="'navbar.adminPanel' | translate">
           <p-button icon="pi pi-chart-bar" routerLink="/admin" [link]="true" [rounded]="true" [text]="true"
             severity="secondary" size="small" />
         </li>
+        } @if (isLoggedIn) {
         <li class="rtl:rotate-180" [title]="'navbar.logout' | translate">
-          <p-button icon="pi pi-sign-out" [rounded]="true" [text]="true" severity="secondary" size="small" />
+          <p-button icon="pi pi-sign-out" [rounded]="true" [text]="true" severity="secondary" size="small"
+            (onClick)="logOut()" />
         </li>
-
+        }
       </ul>
     </nav>
   </div>

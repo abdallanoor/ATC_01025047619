@@ -9,22 +9,28 @@ import { AdminComponent } from './components/admin/admin.component';
 import { AdminEventListComponent } from './components/admin-event-list/admin-event-list.component';
 import { CreateEventComponent } from './components/create-event/create-event.component';
 import { EditEventComponent } from './components/edit-event/edit-event.component';
+import { authGuard } from './core/guards/auth.guard';
+import { isLoggedInGuard } from './core/guards/is-logged-in.guard';
+import { isAdminGuard } from './core/guards/admin.guard';
 
 export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
     title: 'Sign in',
+    canActivate: [isLoggedInGuard],
   },
   {
     path: 'register',
     component: RegisterComponent,
     title: 'Create account ',
+    canActivate: [isLoggedInGuard],
   },
   {
     path: 'resetpassword',
     component: ResetPasswordComponent,
     title: 'Forgot password',
+    canActivate: [isLoggedInGuard],
   },
   { path: '', component: HomeComponent, title: 'Tazkara' },
   {
@@ -36,10 +42,12 @@ export const routes: Routes = [
     path: 'congratulations/:id',
     component: CongratulationsScreenComponent,
     title: 'Congratulations',
+    canActivate: [isLoggedInGuard],
   },
   {
     path: 'admin',
     component: AdminComponent,
+    canActivate: [isAdminGuard],
     children: [
       {
         path: '',

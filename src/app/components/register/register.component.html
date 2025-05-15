@@ -4,26 +4,38 @@
       {{ "auth.createYourAccount" | translate }}
     </h2>
     <form class="flex flex-col gap-4" [formGroup]="registerForm" (ngSubmit)="registerSubmit()">
-      <p-floatlabel variant="in" class="text-sm">
-        <input pInputText class="w-full" id="name" type="text" autocomplete="off" formControlName="name" />
-        <label for="email">{{ "auth.name" | translate }}</label>
-      </p-floatlabel>
-      <p-floatlabel variant="in" class="text-sm">
-        <input pInputText class="w-full" id="email" type="email" autocomplete="off" formControlName="email" />
-        <label for="email">{{ "auth.email" | translate }}</label>
-      </p-floatlabel>
+      <div>
+        <p-floatlabel variant="in" class="text-sm">
+          <input pInputText class="w-full" id="name" type="text" autocomplete="off" formControlName="name" />
+          <label for="name">{{ "auth.name" | translate }}</label>
+        </p-floatlabel>
+        <app-form-field-error-message [form]="registerForm" controlName="name" />
+      </div>
+      <div>
+        <p-floatlabel variant="in" class="text-sm">
+          <input pInputText class="w-full" id="email" type="email" autocomplete="off" formControlName="email" />
+          <label for="email">{{ "auth.email" | translate }}</label>
+        </p-floatlabel>
+        <app-form-field-error-message [form]="registerForm" controlName="email" />
+      </div>
 
-      <p-floatlabel variant="in" class="text-sm">
-        <p-password inputStyleClass="w-full" styleClass="w-full" autocomplete="current-password" inputId="password"
-          formControlName="password" [feedback]="false" [toggleMask]="true" />
-        <label for="password">{{ "auth.password" | translate }}</label>
-      </p-floatlabel>
+      <div>
+        <p-floatlabel variant="in" class="text-sm">
+          <p-password inputStyleClass="w-full" styleClass="w-full" autocomplete="current-password" inputId="password"
+            formControlName="password" [feedback]="false" [toggleMask]="true" />
+          <label for="password">{{ "auth.password" | translate }}</label>
+        </p-floatlabel>
+        <app-form-field-error-message [form]="registerForm" controlName="password" />
+      </div>
 
-      <p-floatlabel variant="in" class="text-sm">
-        <p-password inputStyleClass="w-full" styleClass="w-full" autocomplete="current-password" inputId="rePassword"
-          formControlName="rePassword" [feedback]="false" [toggleMask]="true" />
-        <label for="rePassword">{{ "auth.confirmPassword" | translate }}</label>
-      </p-floatlabel>
+      <div>
+        <p-floatlabel variant="in" class="text-sm">
+          <p-password inputStyleClass="w-full" styleClass="w-full" autocomplete="current-password" inputId="rePassword"
+            formControlName="rePassword" [feedback]="false" [toggleMask]="true" />
+          <label for="rePassword">{{ "auth.confirmPassword" | translate }}</label>
+        </p-floatlabel>
+        <app-form-field-error-message [form]="registerForm" controlName="rePassword" />
+      </div>
 
       <p-button [label]="'auth.createAccount' | translate" type="submit" styleClass="w-full" />
     </form>

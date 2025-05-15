@@ -7,6 +7,9 @@
     "forgotPassword": "نسيت كلمة السر؟",
     "email": "الإيميل",
     "password": "كلمة السر",
+    "demo": "عرض حسابات للتجربة",
+    "admin": "جرب كأدمن",
+    "user": "جرب كمستخدم",
     "confirmPassword": "أكد كلمة السر",
     "name": "اسمك كامل",
     "AlreadyHaveAnAccount": "عندك حساب قبل كده؟",
@@ -22,7 +25,14 @@
     "resendEmail": "ابعت الإيميل تاني",
     "enterNewPassword": "اكتب كلمة سر جديدة",
     "newPassword": "كلمة السر الجديدة",
-    "reset": "غير"
+    "reset": "غير",
+    "errors": {
+      "required": "محتاج تعبي الخانة دي علشان تكمل",
+      "emailFormat": "راجع شكل الإيميل (زي name@email.com)",
+      "passwordLength": "الباسورد لازم يبقى ٨ حروف أو أكتر",
+      "nameLength": "الاسم لازم يكون 4 حروف على الأقل",
+      "passwordsMismatch": "كلمة السر مش متطابقة"
+    }
   },
   "navbar": {
     "logo": "تـذكــــرة",

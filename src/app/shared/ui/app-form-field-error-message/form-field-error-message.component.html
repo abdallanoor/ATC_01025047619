@@ -1,0 +1,18 @@
+@if (form.get(controlName)?.errors && form.get(controlName)?.touched) {
+<p-message severity="error" variant="simple" size="small" styleClass="mt-1">
+  @if (form.get(controlName)?.getError('required')) {
+  {{ "auth.errors.required" | translate }} } @if
+  (form.get(controlName)?.getError('minlength') && controlName === 'name') {
+  {{ "auth.errors.nameLength" | translate }} } @if
+  (form.get(controlName)?.getError('minlength') && (controlName === 'password'
+  || controlName === 'newPassword') || controlName === "currentPassword" ) {
+  {{ "auth.errors.passwordLength" | translate }} } @if
+  (form.get(controlName)?.getError('email')) {
+  {{ "auth.errors.emailFormat" | translate }} }
+</p-message>
+}@else if (form.getError('mismatch') && form.get(controlName)?.touched &&
+controlName === 'rePassword' ) {
+<p-message severity="error" variant="simple" size="small" styleClass="mt-1">
+  {{ "auth.errors.passwordsMismatch" | translate }}
+</p-message>
+}
