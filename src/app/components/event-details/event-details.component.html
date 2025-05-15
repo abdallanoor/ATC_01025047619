@@ -1,4 +1,4 @@
-<main class="container mb-12">
+<main class="container mb-32 md:mb-12">
   <div class="w-full my-4">
     <img [src]="event.image" class="w-full rounded-lg h-56 md:h-[30rem] object-cover"
       [alt]="currentLanguage == 'ar' ? event.ar.eventName : event.eventName" />
@@ -43,7 +43,7 @@
     </div>
     <div
       class="fixed bottom-0 right-0 left-0 md:sticky md:top-4 md:min-w-80 h-fit md:ms-16 p-3 bg-primary-contrast border rounded-border border-surface">
-      <p class="font-medium mb-4">
+      <p class="text-lg font-semibold mb-4">
         {{ "events.price" | translate }}:
         {{
         event.price === 0
