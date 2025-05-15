@@ -43,7 +43,8 @@
     "bookNow": "Book now",
     "location": "Location",
     "price": "Price",
-    "egp": "EGP"
+    "egp": "EGP",
+    "free": "Free"
   },
   "booking": {
     "congratulations": "Congratulations!",

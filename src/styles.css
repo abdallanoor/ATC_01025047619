@@ -34,3 +34,13 @@
 .p-toast {
   @apply max-sm:!w-80;
 }
+/* DataView Override */
+.p-dataview {
+  @apply !border-none;
+}
+.p-dataview-content {
+  @apply !bg-transparent;
+}
+.p-paginator {
+  @apply !w-fit mx-auto mt-6;
+}

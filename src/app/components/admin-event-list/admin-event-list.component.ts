@@ -43,7 +43,7 @@ export class AdminEventListComponent implements OnInit {
       this.currentLanguage = lang;
     });
 
-    this.events = this.eventService.getAllEvents();
+    this.events = this.eventService.getAllEvents().reverse();
   }
 
   deleteEvent() {

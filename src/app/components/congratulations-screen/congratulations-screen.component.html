@@ -18,30 +18,36 @@
 
     <div class="p-6">
       <h2 class="text-lg font-bold text-center mb-4">
-        {{ "events.eventTitle" | translate }}
+        {{ currentLanguage == "ar" ? event.ar.eventName : event.eventName }}
       </h2>
       <div class="grid grid-cols-2 gap-y-2 text-sm">
-        <div class="opacity-60 font-medium">
+        <div class="text-muted-color font-medium">
           {{ "booking.dateTime" | translate }}
         </div>
-        <div class="text-end font-medium">Jun 15, 2025</div>
+        <div class="text-end font-medium">
+          {{ event.date | date : "dd/MM/yyyy • HH:mm" }}
+        </div>
 
-        <div class="opacity-60 font-medium">
+        <div class="text-muted-color font-medium">
           {{ "events.location" | translate }}
         </div>
         <div class="text-end font-medium">
-          {{ "events.location" | translate }}
+          {{ currentLanguage == "ar" ? event.ar.venue : event.venue }}
         </div>
 
-        <div class="opacity-60 font-medium">
+        <div class="text-muted-color font-medium">
           {{ "events.price" | translate }}
         </div>
         <div class="text-end font-medium">
-          400 {{ "events.egp" | translate }}
+          {{
+          event.price === 0
+          ? ("events.free" | translate)
+          : event.price + " " + ("events.egp" | translate)
+          }}
         </div>
       </div>
 
-      <div class="bg-zinc-100 opacity-70 text-sm mt-6 p-3 rounded-md dark:bg-zinc-800">
+      <div class="bg-zinc-100 text-muted-color text-sm mt-6 p-3 rounded-md dark:bg-zinc-800">
         {{ "booking.arriveEarly" | translate }}
       </div>
 

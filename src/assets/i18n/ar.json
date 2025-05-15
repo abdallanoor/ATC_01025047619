@@ -43,13 +43,14 @@
     "bookNow": "أحجز دلوقتي",
     "location": "العنوان",
     "price": "السعر",
-    "egp": "جنيه"
+    "egp": "جنيه",
+    "free": "مجاني"
   },
   "booking": {
     "congratulations": "مبروك!",
     "ticketBooked": "تم حجز التذكرة بنجاح",
     "dateTime": "الميعاد والتوقيت",
-    "arriveEarly": "ياريت تيجي قبل بداية الحدث بـ ١٥ دقيقة.",
+    "arriveEarly": "ياريت تيجي قبل بداية الفعالية بـ ١٥ دقيقة.",
     "browseEvents": "شوف فعاليات تانية",
     "viewBookings": "عرض حجوزاتي"
   },

@@ -33,7 +33,7 @@ export const routes: Routes = [
     title: 'Event details',
   },
   {
-    path: 'congratulations',
+    path: 'congratulations/:id',
     component: CongratulationsScreenComponent,
     title: 'Congratulations',
   },
