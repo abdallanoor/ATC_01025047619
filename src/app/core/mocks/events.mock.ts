@@ -39,6 +39,25 @@ export const EVENTS: Event[] = [
   },
   {
     id: 'event-3',
+    eventName: 'Michael Buble Concert',
+    description:
+      'Get ready for an unforgettable experience as Michael Bublé, the world-renowned artist, performs live for the very first time in Egypt! On May 26th, 2025, the New Capital will be hosting this spectacular concert, bringing the smooth sounds of Bublé’s timeless hits to the heart of Egypt. Witness the Grammy-winning artist live in concert, as he delivers an evening filled with romance, soul, and unforgettable performances.',
+    category: { id: '1', en: 'Music', ar: 'موسيقى' },
+    date: '2025-05-26T21:00:00',
+    venue: 'Open Air Theater - City Of Arts and Culture, New Capital, Cairo',
+    price: 1000,
+    image:
+      'https://d3vzzcunewy153.cloudfront.net/img/17f95c00-4ab0-492d-94a6-3a647e5ea2fe/2147f69d7b087a3974fbbe154219138d.jpg',
+    ar: {
+      eventName: 'حفلة مايكل بوبليه',
+      description:
+        'استعد لليلة مش عادية مع مايكل بوبليه، النجم العالمي، في أول حفلة ليه في مصر! يوم 26 مايو 2025، في العاصمة الإدارية الجديدة، هنعيش سوا أجواء مليانة إحساس ورومانسية مع أغانيه اللي كلنا بنحبها. متفوتش الفرصة وشوفه لايف في حفلة هتفضل فاكرها.',
+      venue:
+        'المسرح المكشوف - مدينة الفنون والثقافة، العاصمة الإدارية، القاهرة',
+    },
+  },
+  {
+    id: 'event-4',
     eventName: 'Jeff Dunham - Artificial Intelligence',
     description:
       'Catch world-renowned ventriloquist Jeff Dunham live for the first time in Egypt! On June 26th, enjoy an evening of hilarious comedy and unforgettable characters at Drama Hall, New Capital. A night of wit, laughs, and masterful entertainment awaits.',
@@ -56,7 +75,7 @@ export const EVENTS: Event[] = [
     },
   },
   {
-    id: 'event-4',
+    id: 'event-5',
     eventName: 'Mina Nader Live',
     description:
       'After a successful tour across several countries, Mina Nader returns with a fresh edition of his interactive comedy therapy show. Get ready for a night full of laughter and real connection at Theatro Arkan.',
@@ -74,7 +93,7 @@ export const EVENTS: Event[] = [
     },
   },
   {
-    id: 'event-5',
+    id: 'event-6',
     eventName: 'Ignite BSE',
     description:
       'Ignite BSE is a dynamic event featuring fast-paced, inspiring talks from students, professionals, and celebrities. Enjoy live performances, giveaways, and community engagement during the mid-event break with sponsor booths, food, and drinks.',
@@ -92,7 +111,7 @@ export const EVENTS: Event[] = [
     },
   },
   {
-    id: 'event-6',
+    id: 'event-7',
     eventName: 'Tetrat w Zekrayat – Ali Elhaggar (Second Edition)',
     description:
       'Following the overwhelming success of the first edition, Ali El Haggar returns with another nostalgic night. Join us for an unforgettable musical evening filled with iconic TV series songs that touched generations.',
@@ -110,7 +129,7 @@ export const EVENTS: Event[] = [
     },
   },
   {
-    id: 'event-7',
+    id: 'event-8',
     eventName: 'Cairo Photo Week 2025',
     description:
       'An immersive 11-day photography and image-making festival in Downtown Cairo featuring exhibitions, talks, workshops, and more for both professionals and the public.',
@@ -128,7 +147,7 @@ export const EVENTS: Event[] = [
     },
   },
   {
-    id: 'event-8',
+    id: 'event-9',
     eventName: 'ZED Park Family Festival',
     description:
       'An exciting week at ZED Park filled with rides, games, and spectacular shows — promising an unforgettable festive experience for families and kids.',
