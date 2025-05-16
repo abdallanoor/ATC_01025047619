@@ -15,7 +15,7 @@
       {{ "admin.addNewEvent" | translate }} <i class="pi pi-plus"></i>
     </a>
   </div>
-  <p-table #eventsTable [value]="events" [globalFilterFields]="
+  <p-table #eventsTable [paginator]="true" [rows]="6" [showFirstLastIcon]="false" [value]="events" [globalFilterFields]="
       currentLanguage === 'ar'
         ? ['ar.eventName', 'category.ar', 'ar.venue']
         : ['eventName', 'category.en', 'venue']
