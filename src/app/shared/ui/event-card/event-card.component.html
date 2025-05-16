@@ -1,7 +1,7 @@
 <div
-  class="relative flex flex-col md:flex-row bg-primary-contrast shadow rounded-lg overflow-hidden md:h-80 md:truncate">
+  class="relative flex flex-col md:flex-row bg-primary-contrast shadow rounded-lg overflow-hidden md:h-72 md:truncate">
   <div class="w-full md:w-[60%] lg:w-[65%]">
-    <img [src]="event.image" class="w-full h-64 md:h-80 object-cover"
+    <img [src]="event.image" class="w-full h-64 md:h-72 object-cover"
       [alt]="currentLanguage == 'ar' ? event.ar.eventName : event.eventName" />
     <p-badge [value]="currentLanguage == 'ar' ? event.category.ar : event.category.en" class="absolute top-4 start-4"
       severity="secondary" />
@@ -25,15 +25,19 @@
       <i class="pi pi-calendar" style="font-size: 0.875rem"></i>
       <p>{{ event.date | date : "dd/MM/yyyy • HH:mm" }}</p>
     </div>
-    <!-- <p class="font-medium">
-      {{ "events.price" | translate }}:
-      {{
-      event.price === 0
-      ? ("events.free" | translate)
-      : event.price + " " + ("events.egp" | translate)
-      }}
-    </p> -->
-    <a pButton icon="pi pi-ticket" [routerLink]="'/event/' + event.id" class="p-button  w-full mt-1 md:mt-auto">{{
+
+    <div class="flex items-center gap-2">
+      <i class="pi pi-money-bill" style="font-size: 0.875rem"></i>
+      <p>
+        {{
+        event.price === 0
+        ? ("events.free" | translate)
+        : event.price + " " + ("events.egp" | translate)
+        }}</p>
+    </div>
+
+    <a pButton icon="pi pi-ticket" [routerLink]="'/event/' + event.id"
+      class="p-button !w-full mt-1 md:mt-auto font-semibold">{{
       "events.bookNow" |
       translate }}</a>
   </div>
