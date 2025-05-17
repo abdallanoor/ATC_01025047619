@@ -2,7 +2,7 @@
 
 A web application to browse, book, and manage events with an integrated admin panel for event management.
 
-![preview](https://res.cloudinary.com/dm1ziouxl/image/upload/v1747498544/p7sgzbz2nq6lekvqx8z3.png)
+![preview](https://res.cloudinary.com/dm1ziouxl/image/upload/v1747502651/kooycy5qfqkmko3zbpz9.png)
 
 ## Technologies Used
 
