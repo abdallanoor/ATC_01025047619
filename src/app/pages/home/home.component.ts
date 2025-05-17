@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EventsComponent } from '../events/events.component';
+import { EventsComponent } from '../../components/events/events.component';
 
 @Component({
   selector: 'app-home',

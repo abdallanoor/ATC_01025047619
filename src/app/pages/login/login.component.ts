@@ -1,11 +1,8 @@
+import { MessageService } from 'primeng/api';
+import { AuthService } from '../../core/services/auth.service';
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import {
-  AbstractControl,
-  FormBuilder,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabel } from 'primeng/floatlabel';
@@ -13,12 +10,11 @@ import { PasswordModule } from 'primeng/password';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from '../../core/services/language.service';
-import { AuthService } from '../../core/services/auth.service';
-import { MessageService } from 'primeng/api';
-import { FormFieldErrorMessageComponent } from '../../shared/ui/app-form-field-error-message/form-field-error-message.component';
+import { MessageModule } from 'primeng/message';
+import { FormFieldErrorMessageComponent } from '../../components/app-form-field-error-message/form-field-error-message.component';
 
 @Component({
-  selector: 'app-register',
+  selector: 'app-login',
   imports: [
     ButtonModule,
     FormsModule,
@@ -28,11 +24,12 @@ import { FormFieldErrorMessageComponent } from '../../shared/ui/app-form-field-e
     ReactiveFormsModule,
     RouterLink,
     TranslateModule,
+    MessageModule,
     FormFieldErrorMessageComponent,
   ],
-  templateUrl: './register.component.html',
+  templateUrl: './login.component.html',
 })
-export class RegisterComponent {
+export class LoginComponent {
   authService = inject(AuthService);
   router = inject(Router);
   messageService = inject(MessageService);
@@ -41,16 +38,12 @@ export class RegisterComponent {
   fb = new FormBuilder();
 
   currentLanguage: string = 'ar';
+  messageVisible: boolean = false;
 
-  registerForm: FormGroup = this.fb.group(
-    {
-      name: ['', [Validators.required, Validators.minLength(3)]],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]],
-      rePassword: ['', Validators.required],
-    },
-    { validators: this.confirmPassword }
-  );
+  loginForm: FormGroup = this.fb.group({
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(8)]],
+  });
 
   ngOnInit(): void {
     this.languageService.lang$.subscribe((lang) => {
@@ -58,24 +51,16 @@ export class RegisterComponent {
     });
   }
 
-  confirmPassword(g: AbstractControl) {
-    return g.get('password')?.value == g.get('rePassword')?.value
-      ? null
-      : { mismatch: true };
-  }
-
-  registerSubmit(): void {
-    if (this.registerForm.valid) {
-      const { name, email, password } = this.registerForm.value;
-      this.authService.register(name, email, password).subscribe((success) => {
+  loginSubmit(): void {
+    if (this.loginForm.valid) {
+      const { email, password } = this.loginForm.value;
+      this.authService.login(email, password).subscribe((success) => {
         if (success) {
           this.router.navigate(['/']);
           this.messageService.add({
             severity: 'success',
             summary:
-              this.currentLanguage == 'ar'
-                ? 'الأكونت اتعمل بنجاح'
-                : 'Account created successfully',
+              this.currentLanguage == 'ar' ? 'أهلاً برجوعك!' : 'Welcome back',
             closable: false,
           });
         } else {
@@ -83,14 +68,18 @@ export class RegisterComponent {
             severity: 'error',
             summary:
               this.currentLanguage == 'ar'
-                ? 'المستخدم ده موجود بالفعل'
-                : 'User already exists',
+                ? 'الإيميل أو كلمة السر مش صح'
+                : 'Invalid email or password',
             closable: false,
           });
         }
       });
     } else {
-      this.registerForm.markAllAsTouched();
+      this.loginForm.markAllAsTouched();
     }
+  }
+
+  toggleMessage() {
+    this.messageVisible = !this.messageVisible;
   }
 }

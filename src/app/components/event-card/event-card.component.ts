@@ -3,12 +3,12 @@ import { ButtonModule } from 'primeng/button';
 import { BadgeModule } from 'primeng/badge';
 import { TranslateModule } from '@ngx-translate/core';
 import { Router, RouterLink } from '@angular/router';
-import { Event } from '../../../core/interfaces/event.interface';
-import { LanguageService } from '../../../core/services/language.service';
+import { Event } from '../../core/interfaces/event.interface';
+import { LanguageService } from '../../core/services/language.service';
 import { DatePipe } from '@angular/common';
-import { AuthService } from '../../../core/services/auth.service';
-import { BookingService } from '../../../core/services/booking.service';
-import { User } from '../../../core/interfaces/user.interface';
+import { AuthService } from '../../core/services/auth.service';
+import { BookingService } from '../../core/services/booking.service';
+import { User } from '../../core/interfaces/user.interface';
 
 @Component({
   selector: 'app-event-card',

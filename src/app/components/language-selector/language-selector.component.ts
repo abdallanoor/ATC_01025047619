@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Select } from 'primeng/select';
-import { LanguageService } from '../../../core/services/language.service';
+import { LanguageService } from '../../core/services/language.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
 
