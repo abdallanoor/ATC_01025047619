@@ -1,5 +1,4 @@
 {
-  "GREETING": "أهلاً",
   "auth": {
     "signin": "سجل دخولك",
     "createYourAccount": "اعمل حسابك",
@@ -45,12 +44,8 @@
   },
   "events": {
     "title": "الفعاليات",
-    "search": "ابحث",
-    "eventTitle": "اسم الفعالية",
     "dateAndTime": "التاريخ والوقت",
-    "category": "الفئة",
     "isBooked": "محجوز",
-    "description": "الشرح",
     "bookNow": "أحجز دلوقتي",
     "location": "العنوان",
     "price": "السعر",
@@ -69,11 +64,10 @@
     "viewBookings": "عرض حجوزاتي",
     "myBookings": "حجوزاتي",
     "noBookings": "لا يوجد حجوزات",
-    "viweEvent": "شوف الحدث"
+    "viweEvent": "شوف الفعالية"
   },
   "admin": {
     "title": "صفحة الأدمن",
-    "manageYourEvents": "إدارة فعالياتك",
     "search": "ابحث",
     "addNewEvent": "ضيف فعالية جديدة",
     "noEvents": "لا يوجد فعاليات",
@@ -96,15 +90,6 @@
         "eventNameAr": "اسم الفعالية (بالعربي)",
         "descriptionAr": "الوصف (بالعربي)",
         "venueAr": "المكان (بالعربي)"
-      },
-      "errors": {
-        "eventName": "اكتب اسم الفعالية.",
-        "category": "اختار الفئة.",
-        "description": "اكتب تفاصيل عن الفعالية.",
-        "venue": "الفعالية هتكون فين.",
-        "price": "ادخل سعر.",
-        "date": "اختار معاد للفعالية.",
-        "image": "حط لينك الصورة."
       },
       "section": {
         "arabicDetails": "تفاصيل بالعربي"

@@ -14,7 +14,6 @@ import { DatePipe } from '@angular/common';
   selector: 'app-congratulations-screen',
   imports: [ButtonModule, CardModule, TranslateModule, RouterLink, DatePipe],
   templateUrl: './congratulations-screen.component.html',
-  styleUrl: './congratulations-screen.component.css',
 })
 export class CongratulationsScreenComponent implements OnInit {
   router = inject(Router);

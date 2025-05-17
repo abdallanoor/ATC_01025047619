@@ -1,5 +1,4 @@
 {
-  "GREETING": "Hello",
   "auth": {
     "signin": "Sign in",
     "createYourAccount": "Create your account",
@@ -45,12 +44,8 @@
   },
   "events": {
     "title": "Events",
-    "search": "Search",
-    "eventTitle": "Event Title",
     "dateAndTime": "Date and Time",
-    "category": "Category",
     "isBooked": "Booked",
-    "description": "Event Description",
     "bookNow": "Book now",
     "location": "Location",
     "price": "Price",
@@ -73,7 +68,6 @@
   },
   "admin": {
     "title": "Admin panel",
-    "manageYourEvents": "Manage your events",
     "search": "Search",
     "addNewEvent": "Add new event",
     "noEvents": "No events available",
@@ -96,15 +90,6 @@
         "eventNameAr": "Event Name (Arabic)",
         "descriptionAr": "Description (Arabic)",
         "venueAr": "Venue (Arabic)"
-      },
-      "errors": {
-        "eventName": "Please enter the event name.",
-        "category": "Please select a category.",
-        "description": "Please enter the event description.",
-        "venue": "Please enter the event venue.",
-        "price": "Please enter a valid price.",
-        "date": "Please select the event date.",
-        "image": "Please enter the image URL."
       },
       "section": {
         "arabicDetails": "Arabic Details"

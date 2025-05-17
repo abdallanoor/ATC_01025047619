@@ -21,7 +21,6 @@ import { CommonModule } from '@angular/common';
     CommonModule,
   ],
   templateUrl: './events.component.html',
-  styleUrl: './events.component.css',
 })
 export class EventsComponent {
   eventService = inject(EventService);

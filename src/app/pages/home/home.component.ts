@@ -5,6 +5,5 @@ import { EventsComponent } from '../../components/events/events.component';
   selector: 'app-home',
   imports: [EventsComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
 })
 export class HomeComponent {}
