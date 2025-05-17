@@ -1,0 +1,35 @@
+<main class="container mt-6 mb-12">
+  <h1 class="text-3xl font-bold mb-6">{{ "booking.myBookings" | translate }}</h1>
+  <p-table #bookingsTable [value]="bookings">
+    <ng-template #header>
+      <tr>
+        <th>{{ "table.eventName" | translate }}</th>
+        <th>{{ "table.venue" | translate }}</th>
+        <th>{{ "table.date" | translate }}</th>
+        <th>{{ "table.actions" | translate }}</th>
+      </tr>
+    </ng-template>
+    <ng-template #body let-booking>
+      <tr>
+        <td>
+          {{ currentLanguage === "ar" ? booking.ar.eventName : booking.eventName }}
+        </td>
+        <td>{{ currentLanguage === "ar" ? booking.ar.eventVenue : booking.eventVenue }}</td>
+        <td>{{ booking.eventDate | date : "dd/MM/yyyy • HH:mm" }}</td>
+        <td>
+          <a [routerLink]="'/event/' + booking.eventId"
+            class="p-button p-button-secondary p-button-outlined p-button-sm font-semibold">
+            {{ "booking.viweEvent" | translate }}
+          </a>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template #emptymessage>
+      <tr>
+        <td colspan="10" class="!text-center">
+          {{ "booking.noBookings" | translate }}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</main>

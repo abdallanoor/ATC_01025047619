@@ -1,17 +1,19 @@
 <div
-  class="relative flex flex-col md:flex-row bg-primary-contrast shadow rounded-lg overflow-hidden md:h-72 md:truncate">
+  class="relative flex flex-col md:flex-row bg-primary-contrast shadow rounded-lg overflow-hidden md:h-64 md:truncate">
   <div class="w-full md:w-[60%] lg:w-[65%]">
-    <img [src]="event.image" class="w-full h-64 md:h-72 object-cover"
-      [alt]="currentLanguage == 'ar' ? event.ar.eventName : event.eventName" />
-    <p-badge [value]="currentLanguage == 'ar' ? event.category.ar : event.category.en" class="absolute top-4 start-4"
-      severity="secondary" />
+    <img [src]="event.image" class="w-full h-64 object-cover" height="288" width="808"
+      [alt]="currentLanguage == 'ar' ? event.ar.eventName : event.eventName" loading="lazy" />
+    <p-badge size="xlarge" [value]="currentLanguage == 'ar' ? event.category.ar : event.category.en"
+      class="absolute top-4 start-4" severity="secondary" fetchpriority="high" />
+    @if (isBooked && !isAdmin) {
     <p-badge [value]="'events.isBooked' | translate"
       class="absolute top-4 end-4 md:top-auto md:end-auto md:bottom-4 md:start-4" severity="success" />
+    }
   </div>
-  <div class="w-full md:w-[40%] lg:w-[35%] p-4 text-sm flex flex-col gap-3">
-    <h2 class="truncate font-semibold text-2xl">
+  <div class="w-full md:w-[40%] lg:w-[35%] p-4 text-sm flex justify-between flex-col gap-3">
+    <h3 class="truncate font-semibold text-2xl">
       {{ currentLanguage == "ar" ? event.ar.eventName : event.eventName }}
-    </h2>
+    </h3>
     <p class="truncate max-w-full font-semibold">
       {{ currentLanguage == "ar" ? event.ar.description : event.description }}
     </p>
@@ -33,12 +35,14 @@
         event.price === 0
         ? ("events.free" | translate)
         : event.price + " " + ("events.egp" | translate)
-        }}</p>
+        }}
+      </p>
     </div>
 
-    <a pButton icon="pi pi-ticket" [routerLink]="'/event/' + event.id"
-      class="p-button !w-full mt-1 md:mt-auto font-semibold">{{
-      "events.bookNow" |
-      translate }}</a>
+    <p-button icon="pi pi-ticket" [label]="
+        isAdmin
+          ? ('events.details' | translate)
+          : ('events.bookNow' | translate)
+      " styleClass="w-full" class="w-full" (onClick)="onBook(event.id)" />
   </div>
 </div>

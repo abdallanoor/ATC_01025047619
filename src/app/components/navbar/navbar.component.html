@@ -4,24 +4,27 @@
       <!-- Desktop Navigation -->
       <ul class="flex gap-4 max-lg:hidden">
         <li>
-          <a routerLink="/" class="link-underline" routerLinkActive="routerLinkActive"
+          <a routerLink="/" class="nav-link" routerLinkActive="routerLinkActive"
             [routerLinkActiveOptions]="{ exact: true }">{{ "navbar.home" | translate }}</a>
         </li>
-
         @if (!isLoggedIn) {
         <li>
-          <a routerLink="/login" class="link-underline" routerLinkActive="routerLinkActive">{{ "navbar.signin" |
+          <a routerLink="/login" class="nav-link" routerLinkActive="routerLinkActive">{{ "navbar.signin" |
             translate }}</a>
         </li>
-
         <li>
-          <a routerLink="/register" class="link-underline" routerLinkActive="routerLinkActive">{{ "navbar.createAccount"
+          <a routerLink="/register" class="nav-link" routerLinkActive="routerLinkActive">{{ "navbar.createAccount"
             | translate }}</a>
         </li>
         } @if (isLoggedIn && user.role === 'admin') {
         <li>
-          <a routerLink="/admin" class="link-underline" routerLinkActive="routerLinkActive"
+          <a routerLink="/admin" class="nav-link" routerLinkActive="routerLinkActive"
             [routerLinkActiveOptions]="{ exact: true }">{{ "navbar.adminPanel" | translate }}</a>
+        </li>
+        } @else if (isLoggedIn && user.role == "user") {
+        <li>
+          <a routerLink="/bookings" class="nav-link" routerLinkActive="routerLinkActive">{{ "navbar.bookings" |
+            translate }}</a>
         </li>
         }
       </ul>
@@ -50,7 +53,14 @@
           <p-button icon="pi pi-chart-bar" routerLink="/admin" [link]="true" [rounded]="true" [text]="true"
             severity="secondary" size="small" />
         </li>
-        } @if (isLoggedIn) {
+        }
+        @if (isLoggedIn && user.role === 'user') {
+        <li class="lg:hidden" [title]="'navbar.bookings' | translate">
+          <p-button icon="pi pi-book" routerLink="/bookings" [link]="true" [rounded]="true" [text]="true"
+            severity="secondary" size="small" />
+        </li>
+        }
+        @if (isLoggedIn) {
         <li class="rtl:rotate-180" [title]="'navbar.logout' | translate">
           <p-button icon="pi pi-sign-out" [rounded]="true" [text]="true" severity="secondary" size="small"
             (onClick)="logOut()" />

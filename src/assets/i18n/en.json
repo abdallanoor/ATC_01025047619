@@ -40,7 +40,8 @@
     "signin": "Sign in",
     "createAccount": "Create account",
     "adminPanel": "Admin Panel",
-    "logout": "Log out"
+    "logout": "Log out",
+    "bookings": "My bookings"
   },
   "events": {
     "title": "Events",
@@ -54,7 +55,10 @@
     "location": "Location",
     "price": "Price",
     "egp": "EGP",
-    "free": "Free"
+    "free": "Free",
+    "isBookedDes": "You've booked this event",
+    "details": "View details",
+    "adminBookingMessage": "Log in as a regular user to book"
   },
   "booking": {
     "congratulations": "Congratulations!",
@@ -62,23 +66,16 @@
     "dateTime": "Date & Time",
     "arriveEarly": "Please arrive 15 minutes before the event starts.",
     "browseEvents": "Browse more events",
-    "viewBookings": "View my bookings"
+    "viewBookings": "View my bookings",
+    "myBookings": "My bookings",
+    "noBookings": "No bookings available",
+    "viweEvent": "View Event"
   },
   "admin": {
     "title": "Admin panel",
     "manageYourEvents": "Manage your events",
     "search": "Search",
     "addNewEvent": "Add new event",
-    "eventName": "Event Name",
-    "description": "Description",
-    "category": "Category",
-    "date": "Date",
-    "venue": "Venue",
-    "price": "Price",
-    "free": "Free",
-    "egp": "EGP",
-    "image": "Image",
-    "actions": "Actions",
     "noEvents": "No events available",
     "dialog": {
       "deleteHeader": "Delete event",
@@ -118,5 +115,16 @@
         "edit": "Edit Event"
       }
     }
+  },
+  "table": {
+    "eventName": "Event Name",
+    "description": "Description",
+    "category": "Category",
+    "date": "Date",
+    "venue": "Venue",
+    "price": "Price",
+    "actions": "Actions",
+    "free": "Free",
+    "egp": "EGP"
   }
 }

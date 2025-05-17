@@ -4,8 +4,8 @@
   z-index: 10;
 } */
 
-.link-underline {
-  @apply uppercase py-3 text-xs font-bold transition-all text-neutral-400 hover:text-neutral-950 dark:text-neutral-500 dark:hover:text-neutral-50;
+.nav-link {
+  @apply uppercase py-3 text-sm font-bold transition-all text-neutral-400 hover:text-neutral-950 dark:text-neutral-500 dark:hover:text-neutral-50;
 }
 
 .routerLinkActive {

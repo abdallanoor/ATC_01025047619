@@ -1,9 +1,6 @@
 <section class="mb-14">
   <div class="mb-6">
     <h1 class="text-3xl font-bold">{{ "admin.title" | translate }}</h1>
-    <p class="text-sm text-muted-color">
-      {{ "admin.manageYourEvents" | translate }}
-    </p>
   </div>
   <div class="flex justify-between flex-col sm:flex-row gap-4 mb-6">
     <p-iconfield>
@@ -22,12 +19,12 @@
     ">
     <ng-template #header>
       <tr>
-        <th>{{ "admin.eventName" | translate }}</th>
-        <th>{{ "admin.category" | translate }}</th>
-        <th>{{ "admin.venue" | translate }}</th>
-        <th>{{ "admin.date" | translate }}</th>
-        <th>{{ "admin.price" | translate }}</th>
-        <th>{{ "admin.actions" | translate }}</th>
+        <th>{{ "table.eventName" | translate }}</th>
+        <th>{{ "table.category" | translate }}</th>
+        <th>{{ "table.venue" | translate }}</th>
+        <th>{{ "table.date" | translate }}</th>
+        <th>{{ "table.price" | translate }}</th>
+        <th>{{ "table.actions" | translate }}</th>
       </tr>
     </ng-template>
     <ng-template #body let-event>
@@ -43,8 +40,8 @@
         <td>
           {{
           event.price === 0
-          ? ("admin.free" | translate)
-          : event.price + " " + ("admin.egp" | translate)
+          ? ("table.free" | translate)
+          : event.price + " " + ("table.egp" | translate)
           }}
         </td>
         <td>

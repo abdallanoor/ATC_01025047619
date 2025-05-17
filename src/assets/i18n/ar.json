@@ -40,7 +40,8 @@
     "signin": "سجل دخولك",
     "createAccount": "اعمل حساب",
     "adminPanel": "صفحة الأدمن",
-    "logout": "سجل خروجك"
+    "logout": "سجل خروجك",
+    "bookings": "حجوزاتي"
   },
   "events": {
     "title": "الفعاليات",
@@ -54,7 +55,10 @@
     "location": "العنوان",
     "price": "السعر",
     "egp": "جنيه",
-    "free": "مجاني"
+    "free": "مجاني",
+    "isBookedDes": "إنت حجزت الفعالية دي بالفعل",
+    "details": "شوف التفاصيل",
+    "adminBookingMessage": "سجل كمستخدم عادي علشان تحجز"
   },
   "booking": {
     "congratulations": "مبروك!",
@@ -62,23 +66,16 @@
     "dateTime": "الميعاد والتوقيت",
     "arriveEarly": "ياريت تيجي قبل بداية الفعالية بـ ١٥ دقيقة.",
     "browseEvents": "شوف فعاليات تانية",
-    "viewBookings": "عرض حجوزاتي"
+    "viewBookings": "عرض حجوزاتي",
+    "myBookings": "حجوزاتي",
+    "noBookings": "لا يوجد حجوزات",
+    "viweEvent": "شوف الحدث"
   },
   "admin": {
     "title": "صفحة الأدمن",
     "manageYourEvents": "إدارة فعالياتك",
     "search": "ابحث",
     "addNewEvent": "ضيف فعالية جديدة",
-    "eventName": "اسم الفعالية",
-    "description": "الوصف",
-    "category": "التصنيف",
-    "date": "التاريخ",
-    "venue": "المكان",
-    "price": "السعر",
-    "free": "مجاني",
-    "egp": "جنيه",
-    "image": "الصورة",
-    "actions": "إجراءات",
     "noEvents": "لا يوجد فعاليات",
     "dialog": {
       "deleteHeader": "حذف الفعالية",
@@ -118,5 +115,16 @@
         "edit": "عدل الفعالية"
       }
     }
+  },
+  "table": {
+    "eventName": "اسم الفعالية",
+    "description": "الوصف",
+    "category": "التصنيف",
+    "date": "التاريخ",
+    "venue": "المكان",
+    "price": "السعر",
+    "actions": "إجراءات",
+    "free": "مجاني",
+    "egp": "جنيه"
   }
 }

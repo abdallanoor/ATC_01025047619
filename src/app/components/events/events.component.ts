@@ -16,8 +16,6 @@ import { CommonModule } from '@angular/common';
   imports: [
     EventCardComponent,
     PaginatorModule,
-    InputIcon,
-    IconField,
     InputTextModule,
     FormsModule,
     TranslateModule,
@@ -30,28 +28,11 @@ import { CommonModule } from '@angular/common';
 export class EventsComponent {
   eventService = inject(EventService);
 
-  products = signal<any>([]);
-  events = signal<any>([]);
-
+  events = signal<Event[]>([]);
   first: number = 0;
-
   rows: number = 10;
 
   ngOnInit(): void {
-    this.products.set([
-      {
-        id: '1000',
-        code: 'f230fh0g3',
-        name: 'Bamboo Watch',
-        description: 'Product Description 1',
-        image: 'bamboo-watch.jpg',
-        price: 65,
-        category: 'Accessories',
-        quantity: 24,
-        inventoryStatus: 'INSTOCK',
-        rating: 5,
-      },
-    ]);
     this.events.set(this.eventService.getAllEvents());
   }
   onPageChange(event: PaginatorState) {

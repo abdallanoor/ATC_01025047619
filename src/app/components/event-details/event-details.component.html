@@ -1,6 +1,6 @@
 <main class="container mb-32 md:mb-12">
   <div class="w-full my-4">
-    <img [src]="event.image" class="w-full rounded-lg h-56 md:h-[30rem] object-cover"
+    <img [src]="event.image" class="w-full rounded-lg h-56 md:h-[27rem] object-cover"
       [alt]="currentLanguage == 'ar' ? event.ar.eventName : event.eventName" />
   </div>
   <div class="flex justify-between items-center gap-2 mb-2">
@@ -51,7 +51,15 @@
         : event.price + " " + ("events.egp" | translate)
         }}
       </p>
+      @if (isBooked) {
+      <p-message severity="success">{{ "events.isBookedDes" | translate }}</p-message>
+      }
+      @else if (isAdmin) {
+      <p-message severity="success">{{ "events.adminBookingMessage" | translate }}</p-message>
+      }
+      @else {
       <p-button [label]="'events.bookNow' | translate" icon="pi pi-ticket" styleClass="w-full" (onClick)="onBook()" />
+      }
     </div>
   </div>
 </main>
