@@ -1,18 +1,18 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-import { HomeComponent } from './components/home/home.component';
-import { EventDetailsComponent } from './components/event-details/event-details.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { HomeComponent } from './pages/home/home.component';
+import { EventDetailsComponent } from './pages/event-details/event-details.component';
 import { CongratulationsScreenComponent } from './components/congratulations-screen/congratulations-screen.component';
-import { AdminComponent } from './components/admin/admin.component';
+import { AdminComponent } from './pages/admin/admin.component';
 import { AdminEventListComponent } from './components/admin-event-list/admin-event-list.component';
 import { CreateEventComponent } from './components/create-event/create-event.component';
 import { EditEventComponent } from './components/edit-event/edit-event.component';
 import { isLoggedInGuard } from './core/guards/is-logged-in.guard';
 import { isAdminGuard } from './core/guards/admin.guard';
 import { isRegularUserGuard } from './core/guards/regular-user.guard';
-import { BookingsComponent } from './components/bookings/bookings.component';
+import { BookingsComponent } from './pages/bookings/bookings.component';
 
 export const routes: Routes = [
   {

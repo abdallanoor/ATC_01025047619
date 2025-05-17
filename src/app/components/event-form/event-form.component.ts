@@ -26,7 +26,7 @@ import { Category } from '../../core/interfaces/category.interface';
 import { CATEGORIES } from '../../core/mocks/categories.mock';
 import { Event } from '../../core/interfaces/event.interface';
 import { MessageModule } from 'primeng/message';
-import { FormFieldErrorMessageComponent } from '../../shared/ui/app-form-field-error-message/form-field-error-message.component';
+import { FormFieldErrorMessageComponent } from '../app-form-field-error-message/form-field-error-message.component';
 
 @Component({
   selector: 'app-event-form',

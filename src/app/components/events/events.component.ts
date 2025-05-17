@@ -1,9 +1,7 @@
 import { EventService } from './../../core/services/event.service';
 import { Component, inject, signal } from '@angular/core';
-import { EventCardComponent } from '../../shared/ui/event-card/event-card.component';
+import { EventCardComponent } from '../event-card/event-card.component';
 import { PaginatorModule, PaginatorState } from 'primeng/paginator';
-import { InputIcon } from 'primeng/inputicon';
-import { IconField } from 'primeng/iconfield';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
