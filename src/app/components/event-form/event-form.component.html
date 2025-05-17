@@ -13,11 +13,7 @@
         "admin.form.labels.eventNameEn" | translate
         }}</label>
       <input pInputText id="eventName" formControlName="eventName" class="w-full" />
-      @if (eventForm.get('eventName')?.invalid &&
-      eventForm.get('eventName')?.touched) {
-      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{ "admin.form.errors.eventName" |
-        translate }}</p-message>
-      }
+      <app-form-field-error-message [form]="eventForm" controlName="eventName" />
     </div>
 
     <!-- Venue (en) -->
@@ -26,11 +22,7 @@
         "admin.form.labels.venueEn" | translate
         }}</label>
       <input type="text" id="venue" formControlName="venue" pInputText class="w-full" />
-      @if (eventForm.get('venue')?.invalid && eventForm.get('venue')?.touched) {
-      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
-        "admin.form.errors.venue" | translate
-        }}</p-message>
-      }
+      <app-form-field-error-message [form]="eventForm" controlName="venue" />
     </div>
 
     <!-- Description (en) -->
@@ -39,12 +31,7 @@
         "admin.form.labels.descriptionEn" | translate
         }}</label>
       <textarea id="description" formControlName="description" pInputTextarea rows="1" class="w-full"></textarea>
-      @if (eventForm.get('description')?.invalid &&
-      eventForm.get('description')?.touched) {
-      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
-        "admin.form.errors.description" | translate
-        }}</p-message>
-      }
+      <app-form-field-error-message [form]="eventForm" controlName="description" />
     </div>
 
     <!-- Category -->
@@ -55,12 +42,7 @@
       <p-select id="category" [options]="categories" formControlName="category"
         [optionLabel]="currentLanguage === 'ar' ? 'ar' : 'en'" styleClass="w-full">
       </p-select>
-      @if (eventForm.get('category')?.invalid &&
-      eventForm.get('category')?.touched) {
-      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
-        "admin.form.errors.category" | translate
-        }}</p-message>
-      }
+      <app-form-field-error-message [form]="eventForm" controlName="category" />
     </div>
 
     <!-- Price -->
@@ -69,11 +51,7 @@
         "admin.form.labels.price" | translate
         }}</label>
       <p-inputNumber inputId="price" formControlName="price" [min]="0" class="w-full"></p-inputNumber>
-      @if (eventForm.get('price')?.invalid && eventForm.get('price')?.touched) {
-      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
-        "admin.form.errors.price" | translate
-        }}</p-message>
-      }
+      <app-form-field-error-message [form]="eventForm" controlName="price" />
     </div>
 
     <!-- Date -->
@@ -83,11 +61,7 @@
         }}</label>
       <p-datepicker inputId="date" formControlName="date" [showIcon]="true" [iconDisplay]="'input'" [showTime]="true"
         class="w-full" styleClass="w-full max-w-full" />
-      @if (eventForm.get('date')?.invalid && eventForm.get('date')?.touched) {
-      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
-        "admin.form.errors.date" | translate
-        }}</p-message>
-      }
+      <app-form-field-error-message [form]="eventForm" controlName="date" />
     </div>
 
     <!-- Image -->
@@ -96,11 +70,7 @@
         "admin.form.labels.image" | translate
         }}</label>
       <input type="text" id="image" formControlName="image" pInputText class="w-full" />
-      @if (eventForm.get('image')?.invalid && eventForm.get('image')?.touched) {
-      <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
-        "admin.form.errors.image" | translate
-        }}</p-message>
-      }
+      <app-form-field-error-message [form]="eventForm" controlName="image" />
     </div>
     @if (eventForm.get('image')?.value) {
     <div class="mt-2 aspect-video w-full max-w-sm overflow-hidden rounded-md">
@@ -119,12 +89,8 @@
             "admin.form.labels.eventNameAr" | translate
             }}</label>
           <input type="text" id="ar.eventName" formControlName="eventName" pInputText class="w-full" />
-          @if (eventForm.get('ar.eventName')?.invalid &&
-          eventForm.get('ar.eventName')?.touched) {
-          <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
-            "admin.form.errors.eventName" | translate
-            }}</p-message>
-          }
+          <app-form-field-error-message [form]="eventForm" controlName="ar.eventName" />
+
         </div>
 
         <!-- Venue (ar) -->
@@ -133,12 +99,7 @@
             "admin.form.labels.venueAr" | translate
             }}</label>
           <input type="text" id="ar.venue" formControlName="venue" pInputText class="w-full" />
-          @if (eventForm.get('ar.venue')?.invalid &&
-          eventForm.get('ar.venue')?.touched) {
-          <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
-            "admin.form.errors.venue" | translate
-            }}</p-message>
-          }
+          <app-form-field-error-message [form]="eventForm" controlName="ar.venue" />
         </div>
 
         <!-- Description (ar) -->
@@ -147,12 +108,7 @@
             "admin.form.labels.descriptionAr" | translate
             }}</label>
           <textarea id="ar.description" formControlName="description" pInputTextarea rows="1" class="w-full"></textarea>
-          @if (eventForm.get('ar.description')?.invalid &&
-          eventForm.get('ar.description')?.touched) {
-          <p-message severity="error" variant="simple" size="small" styleClass="mt-1">{{
-            "admin.form.errors.description" | translate
-            }}</p-message>
-          }
+          <app-form-field-error-message [form]="eventForm" controlName="ar.description" />
         </div>
       </div>
     </div>

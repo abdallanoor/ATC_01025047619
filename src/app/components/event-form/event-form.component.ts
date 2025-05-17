@@ -26,6 +26,7 @@ import { Category } from '../../core/interfaces/category.interface';
 import { CATEGORIES } from '../../core/mocks/categories.mock';
 import { Event } from '../../core/interfaces/event.interface';
 import { MessageModule } from 'primeng/message';
+import { FormFieldErrorMessageComponent } from '../../shared/ui/app-form-field-error-message/form-field-error-message.component';
 
 @Component({
   selector: 'app-event-form',
@@ -41,6 +42,7 @@ import { MessageModule } from 'primeng/message';
     ReactiveFormsModule,
     FormsModule,
     RouterLink,
+    FormFieldErrorMessageComponent,
   ],
   templateUrl: './event-form.component.html',
   styleUrl: './event-form.component.css',
@@ -67,7 +69,10 @@ export class EventFormComponent implements OnInit {
       category: [this.event ? this.event.category : null, Validators.required],
       date: [this.event ? new Date(this.event.date) : '', Validators.required],
       venue: [this.event ? this.event.venue : '', Validators.required],
-      price: [this.event ? this.event.price : 0, [, Validators.min(0)]],
+      price: [
+        this.event ? this.event.price : 0,
+        [Validators.min(0), Validators.required],
+      ],
       image: [this.event ? this.event.image : '', Validators.required],
       ar: this.fb.group({
         eventName: [
